@@ -19,25 +19,45 @@
         <div class="logo-text">Ashita Foods</div>
         <div class="tag">Authentic Papads • Since 2000</div>
       </a>
-      <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="main-nav" id="main-nav">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#products" class="nav-link">Products</a>
-        <a href="#about" class="nav-link">Why Us</a>
-        <a href="#process" class="nav-link">Process</a>
-        <a href="#gallery" class="nav-link">Gallery</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-      <div class="nav-actions">
+
+      <!-- MOVED NAV-ACTIONS BEFORE MOBILE MENU TOGGLE -->
+      <div class="nav-actions mobile-actions">
         <button id="whatsapp-btn" class="btn-whatsapp">
-          <i class="fab fa-whatsapp"></i> <span class="btn-text">WhatsApp</span>
+          <i class="fab fa-whatsapp"></i>
         </button>
         <button id="cart-toggle" class="btn-cart" aria-controls="cart-panel" aria-expanded="false">
           <i class="fas fa-shopping-bag"></i>
           <span id="cart-count">0</span>
         </button>
+        <div class="language-switcher">
+          <button id="lang-en" class="lang-btn active" data-lang="en">EN</button>
+          <button id="lang-hi" class="lang-btn" data-lang="hi">हिंदी</button>
+        </div>
+      </div>
+
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <a href="#home" class="nav-link" data-en="Home" data-hi="होम">Home</a>
+        <a href="#products" class="nav-link" data-en="Products" data-hi="उत्पाद">Products</a>
+        <a href="#about" class="nav-link" data-en="Why Us" data-hi="क्यों हम">Why Us</a>
+        <a href="#process" class="nav-link" data-en="Process" data-hi="प्रक्रिया">Process</a>
+        <a href="#gallery" class="nav-link" data-en="Gallery" data-hi="गैलरी">Gallery</a>
+        <a href="#contact" class="nav-link" data-en="Contact" data-hi="संपर्क">Contact</a>
+      </nav>
+      <div class="nav-actions desktop-actions">
+        <button id="whatsapp-btn" class="btn-whatsapp">
+          <i class="fab fa-whatsapp"></i> <span class="btn-text" data-en="WhatsApp" data-hi="व्हाट्सएप">WhatsApp</span>
+        </button>
+        <button id="cart-toggle" class="btn-cart" aria-controls="cart-panel" aria-expanded="false">
+          <i class="fas fa-shopping-bag"></i>
+          <span id="cart-count">0</span>
+        </button>
+        <div class="language-switcher">
+          <button id="lang-en" class="lang-btn active" data-lang="en">EN</button>
+          <button id="lang-hi" class="lang-btn" data-lang="hi">हिंदी</button>
+        </div>
       </div>
     </div>
   </header>
@@ -48,33 +68,33 @@
     <div class="container hero-grid">
       <div class="hero-left fade-in">
         <div class="hero-tagline-main">
-          <span class="tagline-text">Hygienically Machine‑Made</span>
-          <span class="tagline-text">Irresistibly Crispy</span>
+          <span class="tagline-text" data-en="Hygienically Machine‑Made" data-hi="स्वच्छ मशीन निर्मित">Hygienically Machine‑Made</span>
+          <span class="tagline-text" data-en="Irresistibly Crispy" data-hi="अविश्वसनीय कुरकुरे">Irresistibly Crispy</span>
         </div>
-        <h1 class="hero-title">Premium Papads Crafted with Care</h1>
-        <p class="hero-lead">
+        <h1 class="hero-title" data-en="Premium Papads Crafted with Care" data-hi="प्रीमियम पापड़ देखभाल से बनाए गए">Premium Papads Crafted with Care</h1>
+        <p class="hero-lead" data-en="Discover premium Moong & Chana Papads crafted in modern, hygiene‑controlled facilities for consistent taste, perfect crunch, and fast doorstep delivery across India." data-hi="आधुनिक, स्वच्छता-नियंत्रित सुविधाओं में निर्मित प्रीमियम मूंग और चना पापड़ की खोज करें, जो सुसंगत स्वाद, परफेक्ट क्रंच और पूरे भारत में तेज डोरस्टेप डिलीवरी प्रदान करते हैं।">
           Discover premium Moong & Chana Papads crafted in modern, hygiene‑controlled facilities for consistent taste, perfect crunch, and fast doorstep delivery across India.
         </p>
         <div class="hero-stats">
           <div class="stat">
             <span class="stat-number">25+</span>
-            <span class="stat-text">Years Trust</span>
+            <span class="stat-text" data-en="Years Trust" data-hi="वर्षों का विश्वास">Years Trust</span>
           </div>
           <div class="stat">
             <span class="stat-number">16+</span>
-            <span class="stat-text">Varieties</span>
+            <span class="stat-text" data-en="Varieties" data-hi="विविधताएं">Varieties</span>
           </div>
           <div class="stat">
-            <span class="stat-number">Pan‑India</span>
-            <span class="stat-text">Fast Delivery</span>
+            <span class="stat-number" data-en="Pan‑India" data-hi="पूरे भारत">Pan‑India</span>
+            <span class="stat-text" data-en="Fast Delivery" data-hi="तेज डिलीवरी">Fast Delivery</span>
           </div>
         </div>
         <div class="hero-actions">
           <a href="#products" class="btn btn-primary">
-            <i class="fas fa-shopping-basket"></i> <span>Explore Products</span>
+            <i class="fas fa-shopping-basket"></i> <span data-en="Explore Products" data-hi="उत्पाद देखें">Explore Products</span>
           </a>
           <button id="hero-whatsapp" class="btn btn-secondary">
-            <i class="fab fa-whatsapp"></i> <span>Order on WhatsApp</span>
+            <i class="fab fa-whatsapp"></i> <span data-en="Order on WhatsApp" data-hi="व्हाट्सएप पर ऑर्डर करें">Order on WhatsApp</span>
           </button>
         </div>
       </div>
@@ -91,29 +111,29 @@
     <section id="products" class="products">
       <div class="container reveal">
         <div class="section-head">
-          <h2>Our Premium Papad Collection</h2>
-          <p class="section-subtitle">Clear per‑kg pricing by packaging type. Select, add, and get fast delivery.</p>
+          <h2 data-en="Our Premium Papad Collection" data-hi="हमारी प्रीमियम पापड़ संग्रह">Our Premium Papad Collection</h2>
+          <p class="section-subtitle" data-en="Clear per‑kg pricing by packaging type. Select, add, and get fast delivery." data-hi="पैकेजिंग प्रकार के अनुसार स्पष्ट प्रति किलो मूल्य। चुनें, जोड़ें और तेज डिलीवरी प्राप्त करें।">Clear per‑kg pricing by packaging type. Select, add, and get fast delivery.</p>
         </div>
 
         <div class="products-controls">
           <div class="controls">
             <div class="search-container" role="search">
               <i class="fas fa-search" aria-hidden="true"></i>
-              <input id="search" type="text" placeholder="Search by name, taste, or type..." aria-label="Search products" />
+              <input id="search" type="text" placeholder="Search by name, taste, or type..." aria-label="Search products" data-en-placeholder="Search by name, taste, or type..." data-hi-placeholder="नाम, स्वाद, या प्रकार से खोजें..." />
             </div>
           </div>
           <div class="filters" role="tablist" aria-label="Product filters">
             <button class="filter active" data-filter="all" role="tab" aria-selected="true">
-              <i class="fas fa-th-large"></i> <span>All</span>
+              <i class="fas fa-th-large"></i> <span data-en="All" data-hi="सभी">All</span>
             </button>
             <button class="filter" data-filter="moong" role="tab" aria-selected="false">
-              <i class="fas fa-seedling"></i> <span>Moong</span>
+              <i class="fas fa-seedling"></i> <span data-en="Moong" data-hi="मूंग">Moong</span>
             </button>
             <button class="filter" data-filter="chana" role="tab" aria-selected="false">
-              <i class="fas fa-certificate"></i> <span>Chana</span>
+              <i class="fas fa-certificate"></i> <span data-en="Chana" data-hi="चना">Chana</span>
             </button>
             <button class="filter" data-filter="other" role="tab" aria-selected="false">
-              <i class="fas fa-star"></i> <span>Special</span>
+              <i class="fas fa-star"></i> <span data-en="Special" data-hi="विशेष">Special</span>
             </button>
           </div>
         </div>
@@ -126,29 +146,29 @@
     <section id="about" class="about">
       <div class="container reveal">
         <div class="section-head center-text">
-          <h2>Why Choose Us</h2>
-          <p class="section-subtitle">Hygiene, consistency, and speed — without compromise.</p>
+          <h2 data-en="Why Choose Us" data-hi="क्यों चुनें हमें">Why Choose Us</h2>
+          <p class="section-subtitle" data-en="Hygiene, consistency, and speed — without compromise." data-hi="स्वच्छता, स्थिरता और गति — बिना समझौता के।">Hygiene, consistency, and speed — without compromise.</p>
         </div>
         <div class="about-grid">
           <div class="about-item">
             <div class="about-icon"><i class="fas fa-leaf"></i></div>
-            <h3>Natural Ingredients</h3>
-            <p>Premium pulses and spices, minimal additives, authentic taste preserved.</p>
+            <h3 data-en="Natural Ingredients" data-hi="प्राकृतिक सामग्री">Natural Ingredients</h3>
+            <p data-en="Premium pulses and spices, minimal additives, authentic taste preserved." data-hi="प्रीमियम दालें और मसाले, न्यूनतम योजक, प्रामाणिक स्वाद संरक्षित।">Premium pulses and spices, minimal additives, authentic taste preserved.</p>
           </div>
           <div class="about-item">
             <div class="about-icon"><i class="fas fa-industry"></i></div>
-            <h3>Modern Production</h3>
-            <p>Machine‑assisted, hygiene‑controlled lines ensure steady quality.</p>
+            <h3 data-en="Modern Production" data-hi="आधुनिक उत्पादन">Modern Production</h3>
+            <p data-en="Machine‑assisted, hygiene‑controlled lines ensure steady quality." data-hi="मशीन-सहायित, स्वच्छता-नियंत्रित लाइनें स्थिर गुणवत्ता सुनिश्चित करती हैं।">Machine‑assisted, hygiene‑controlled lines ensure steady quality.</p>
           </div>
           <div class="about-item">
             <div class="about-icon"><i class="fas fa-shield-alt"></i></div>
-            <h3>Quality Checks</h3>
-            <p>Batch‑wise tests for taste, texture, and safety before packing.</p>
+            <h3 data-en="Quality Checks" data-hi="गुणवत्ता जांच">Quality Checks</h3>
+            <p data-en="Batch‑wise tests for taste, texture, and safety before packing." data-hi="पैकिंग से पहले स्वाद, बनावट और सुरक्षा के लिए बैच-वार परीक्षण।">Batch‑wise tests for taste, texture, and safety before packing.</p>
           </div>
           <div class="about-item">
             <div class="about-icon"><i class="fas fa-truck"></i></div>
-            <h3>Fast Delivery</h3>
-            <p>Secure packaging and reliable logistics across India.</p>
+            <h3 data-en="Fast Delivery" data-hi="तेज डिलीवरी">Fast Delivery</h3>
+            <p data-en="Secure packaging and reliable logistics across India." data-hi="सुरक्षित पैकेजिंग और पूरे भारत में विश्वसनीय लॉजिस्टिक्स।">Secure packaging and reliable logistics across India.</p>
           </div>
         </div>
       </div>
@@ -158,45 +178,45 @@
     <section id="process" class="process">
       <div class="container reveal">
         <div class="section-head center-text">
-          <h2>Our Manufacturing Process</h2>
-          <p class="section-subtitle">Tradition elevated by technology for consistent excellence.</p>
+          <h2 data-en="Our Manufacturing Process" data-hi="हमारी निर्माण प्रक्रिया">Our Manufacturing Process</h2>
+          <p class="section-subtitle" data-en="Tradition elevated by technology for consistent excellence." data-hi="सुसंगत उत्कृष्टता के लिए प्रौद्योगिकी द्वारा उन्नत परंपरा।">Tradition elevated by technology for consistent excellence.</p>
         </div>
         <div class="process-grid">
           <div class="process-item">
             <div class="process-number">01</div>
             <div class="process-icon"><i class="fas fa-tractor"></i></div>
-            <h3>Sourcing</h3>
-            <p>Certified farms, premium pulses selected at origin.</p>
+            <h3 data-en="Sourcing" data-hi="सोर्सिंग">Sourcing</h3>
+            <p data-en="Certified farms, premium pulses selected at origin." data-hi="प्रमाणित फार्म, मूल पर चयनित प्रीमियम दालें।">Certified farms, premium pulses selected at origin.</p>
           </div>
           <div class="process-item">
             <div class="process-number">02</div>
             <div class="process-icon"><i class="fas fa-blender"></i></div>
-            <h3>Preparation</h3>
-            <p>Precise formulations for reliable flavor and texture.</p>
+            <h3 data-en="Preparation" data-hi="तैयारी">Preparation</h3>
+            <p data-en="Precise formulations for reliable flavor and texture." data-hi="विश्वसनीय स्वाद और बनावट के लिए सटीक फॉर्मूलेशन।">Precise formulations for reliable flavor and texture.</p>
           </div>
           <div class="process-item">
             <div class="process-number">03</div>
             <div class="process-icon"><i class="fas fa-cogs"></i></div>
-            <h3>Production</h3>
-            <p>Hygienic, machine‑assisted rolling and shaping.</p>
+            <h3 data-en="Production" data-hi="उत्पादन">Production</h3>
+            <p data-en="Hygienic, machine‑assisted rolling and shaping." data-hi="स्वच्छ, मशीन-सहायित रोलिंग और आकार देना।">Hygienic, machine‑assisted rolling and shaping.</p>
           </div>
           <div class="process-item">
             <div class="process-number">04</div>
             <div class="process-icon"><i class="fas fa-check-double"></i></div>
-            <h3>Quality Check</h3>
-            <p>Crispness, taste, and safety verified each batch.</p>
+            <h3 data-en="Quality Check" data-hi="गुणवत्ता जांच">Quality Check</h3>
+            <p data-en="Crispness, taste, and safety verified each batch." data-hi="प्रत्येक बैच में कुरकुरापन, स्वाद और सुरक्षा सत्यापित।">Crispness, taste, and safety verified each batch.</p>
           </div>
           <div class="process-item">
             <div class="process-number">05</div>
             <div class="process-icon"><i class="fas fa-box"></i></div>
-            <h3>Packaging</h3>
-            <p>Airtight packs protect freshness in transit.</p>
+            <h3 data-en="Packaging" data-hi="पैकेजिंग">Packaging</h3>
+            <p data-en="Airtight packs protect freshness in transit." data-hi="एयरटाइट पैक ट्रांजिट में ताजगी की रक्षा करते हैं।">Airtight packs protect freshness in transit.</p>
           </div>
           <div class="process-item">
             <div class="process-number">06</div>
             <div class="process-icon"><i class="fas fa-shipping-fast"></i></div>
-            <h3>Delivery</h3>
-            <p>Pan‑India shipments with timely updates.</p>
+            <h3 data-en="Delivery" data-hi="डिलीवरी">Delivery</h3>
+            <p data-en="Pan‑India shipments with timely updates." data-hi="समय पर अपडेट के साथ पैन-इंडिया शिपमेंट।">Pan‑India shipments with timely updates.</p>
           </div>
         </div>
       </div>
@@ -206,50 +226,50 @@
     <section id="gallery" class="gallery">
       <div class="container reveal">
         <div class="section-head center-text">
-          <h2>Our Manufacturing Unit</h2>
-          <p class="section-subtitle">A glimpse into our clean, controlled production.</p>
+          <h2 data-en="Our Manufacturing Unit" data-hi="हमारी निर्माण इकाई">Our Manufacturing Unit</h2>
+          <p class="section-subtitle" data-en="A glimpse into our clean, controlled production." data-hi="हमारे स्वच्छ, नियंत्रित उत्पादन की एक झलक।">A glimpse into our clean, controlled production.</p>
         </div>
         <div class="gallery-grid">
           <div class="gallery-item">
             <img src="assets/papad.jpg" alt="Papad dough preparation" loading="lazy">
             <div class="gallery-overlay">
-              <h4>Dough Preparation</h4>
-              <p>Calibrated mixing for uniformity</p>
+              <h4 data-en="Dough Preparation" data-hi="आटा तैयारी">Dough Preparation</h4>
+              <p data-en="Calibrated mixing for uniformity" data-hi="एकरूपता के लिए अंशांकित मिश्रण">Calibrated mixing for uniformity</p>
             </div>
           </div>
           <div class="gallery-item">
             <img src="assets/papad.jpg" alt="Papad drying process" loading="lazy">
             <div class="gallery-overlay">
-              <h4>Drying</h4>
-              <p>Optimized for perfect crispness</p>
+              <h4 data-en="Drying" data-hi="सुखाना">Drying</h4>
+              <p data-en="Optimized for perfect crispness" data-hi="सही कुरकुरापन के लिए अनुकूलित">Optimized for perfect crispness</p>
             </div>
           </div>
           <div class="gallery-item">
             <img src="assets/papad.jpg" alt="Quality ingredients" loading="lazy">
             <div class="gallery-overlay">
-              <h4>Ingredients</h4>
-              <p>Carefully screened lots</p>
+              <h4 data-en="Ingredients" data-hi="सामग्री">Ingredients</h4>
+              <p data-en="Carefully screened lots" data-hi="सावधानीपूर्वक जांचे गए लॉट">Carefully screened lots</p>
             </div>
           </div>
           <div class="gallery-item">
             <img src="assets/papad.jpg" alt="Packaging process" loading="lazy">
             <div class="gallery-overlay">
-              <h4>Packaging</h4>
-              <p>Freshness sealed in</p>
+              <h4 data-en="Packaging" data-hi="पैकेजिंग">Packaging</h4>
+              <p data-en="Freshness sealed in" data-hi="ताजगी सील की गई">Freshness sealed in</p>
             </div>
           </div>
           <div class="gallery-item">
             <img src="assets/papad.jpg" alt="Modern machinery" loading="lazy">
             <div class="gallery-overlay">
-              <h4>Machinery</h4>
-              <p>Consistency at scale</p>
+              <h4 data-en="Machinery" data-hi="मशीनरी">Machinery</h4>
+              <p data-en="Consistency at scale" data-hi="बड़े पैमाने पर स्थिरता">Consistency at scale</p>
             </div>
           </div>
           <div class="gallery-item">
             <img src="assets/papad.jpg" alt="Finished products" loading="lazy">
             <div class="gallery-overlay">
-              <h4>Ready To Ship</h4>
-              <p>Pan‑India dispatch</p>
+              <h4 data-en="Ready To Ship" data-hi="शिप करने के लिए तैयार">Ready To Ship</h4>
+              <p data-en="Pan‑India dispatch" data-hi="पैन-इंडिया डिस्पैच">Pan‑India dispatch</p>
             </div>
           </div>
         </div>
@@ -260,46 +280,46 @@
     <section id="contact" class="contact">
       <div class="container reveal">
         <div class="section-head center-text">
-          <h2>Get In Touch</h2>
-          <p class="section-subtitle">Reach out for bulk and retail orders.</p>
+          <h2 data-en="Get In Touch" data-hi="संपर्क करें">Get In Touch</h2>
+          <p class="section-subtitle" data-en="Reach out for bulk and retail orders." data-hi="थोक और खुदरा ऑर्डर के लिए संपर्क करें।">Reach out for bulk and retail orders.</p>
         </div>
         <div class="contact-grid">
           <div class="contact-info">
             <div class="contact-item">
               <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
               <div class="contact-details">
-                <h3>Our Location</h3>
+                <h3 data-en="Our Location" data-hi="हमारा स्थान">Our Location</h3>
                 <p>301-C Scheme No. 51, Indore<br>Madhya Pradesh – 452006</p>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-icon"><i class="fas fa-phone"></i></div>
               <div class="contact-details">
-                <h3>Phone Number</h3>
+                <h3 data-en="Phone Number" data-hi="फोन नंबर">Phone Number</h3>
                 <p>+91 78695 95395</p>
-                <small>Mon–Sat: 9 AM – 7 PM</small>
+                <small data-en="Mon–Sat: 9 AM – 7 PM" data-hi="सोम-शनि: सुबह 9 बजे - शाम 7 बजे">Mon–Sat: 9 AM – 7 PM</small>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-icon"><i class="fas fa-envelope"></i></div>
               <div class="contact-details">
-                <h3>Email Address</h3>
+                <h3 data-en="Email Address" data-hi="ईमेल पता">Email Address</h3>
                 <p>jainsaumya012@gmail.com</p>
-                <small>Responses within 24 hours</small>
+                <small data-en="Responses within 24 hours" data-hi="24 घंटे के भीतर प्रतिक्रिया">Responses within 24 hours</small>
               </div>
             </div>
             <div class="contact-actions">
               <a id="contact-wa" class="btn btn-whatsapp-full">
-                <i class="fab fa-whatsapp"></i> <span>Message on WhatsApp</span>
+                <i class="fab fa-whatsapp"></i> <span data-en="Message on WhatsApp" data-hi="व्हाट्सएप पर संदेश भेजें">Message on WhatsApp</span>
               </a>
               <a href="tel:+917869595395" class="btn btn-outline">
-                <i class="fas fa-phone"></i> <span>Call Now</span>
+                <i class="fas fa-phone"></i> <span data-en="Call Now" data-hi="अभी कॉल करें">Call Now</span>
               </a>
             </div>
           </div>
           <div class="map-wrap">
             <div class="map-header">
-              <h3><i class="fas fa-map-pin"></i> Find Us Here</h3>
+              <h3><i class="fas fa-map-pin"></i> <span data-en="Find Us Here" data-hi="हमें यहां ढूंढें">Find Us Here</span></h3>
             </div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.328665416745!2d75.86385931533445!3d22.753864332635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd4e7c2d2023%3A0x1a9c7e5f2c2d5c1a!2sIndore%2C%20Madhya%20Pradesh%20452006!5e0!3m2!1sen!2sin!4v1641234567890"
@@ -317,7 +337,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-logo">Ashita Foods</div>
-          <p class="footer-desc">Hygienically machine‑made papads with authentic taste, clear pricing, and fast delivery.</p>
+          <p class="footer-desc" data-en="Hygienically machine‑made papads with authentic taste, clear pricing, and fast delivery." data-hi="स्वच्छ मशीन निर्मित पापड़, प्रामाणिक स्वाद, स्पष्ट मूल्य और तेज डिलीवरी के साथ।">Hygienically machine‑made papads with authentic taste, clear pricing, and fast delivery.</p>
           <div class="social-links">
             <a href="#" id="footer-whatsapp" class="social-link" aria-label="WhatsApp">
               <i class="fab fa-whatsapp"></i>
@@ -325,39 +345,39 @@
           </div>
         </div>
         <div class="footer-col">
-          <h4>Quick Links</h4>
+          <h4 data-en="Quick Links" data-hi="त्वरित लिंक">Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#about">Why Us</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" data-en="Home" data-hi="होम">Home</a></li>
+            <li><a href="#products" data-en="Products" data-hi="उत्पाद">Products</a></li>
+            <li><a href="#about" data-en="Why Us" data-hi="क्यों हम">Why Us</a></li>
+            <li><a href="#process" data-en="Process" data-hi="प्रक्रिया">Process</a></li>
+            <li><a href="#contact" data-en="Contact" data-hi="संपर्क">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Products</h4>
+          <h4 data-en="Products" data-hi="उत्पाद">Products</h4>
           <ul class="footer-links">
-            <li><a href="#products" data-filter-link="moong">Moong Papads</a></li>
-            <li><a href="#products" data-filter-link="chana">Chana Papads</a></li>
-            <li><a href="#products" data-filter-link="other">Special Varieties</a></li>
-            <li><a href="#products" data-filter-link="all">All Products</a></li>
+            <li><a href="#products" data-filter-link="moong" data-en="Moong Papads" data-hi="मूंग पापड़">Moong Papads</a></li>
+            <li><a href="#products" data-filter-link="chana" data-en="Chana Papads" data-hi="चना पापड़">Chana Papads</a></li>
+            <li><a href="#products" data-filter-link="other" data-en="Special Varieties" data-hi="विशेष किस्में">Special Varieties</a></li>
+            <li><a href="#products" data-filter-link="all" data-en="All Products" data-hi="सभी उत्पाद">All Products</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Certifications</h4>
+          <h4 data-en="Certifications" data-hi="प्रमाणपत्र">Certifications</h4>
           <div class="certifications">
-            <p><strong>FSSAI:</strong> 11419850000706</p>
-            <p><strong>GSTIN:</strong> 23AVQPJ1391J1ZC</p>
-            <p><strong>Established:</strong> 2000</p>
+            <p><strong data-en="FSSAI:" data-hi="FSSAI:">FSSAI:</strong> 11419850000706</p>
+            <p><strong data-en="GSTIN:" data-hi="GSTIN:">GSTIN:</strong> 23AVQPJ1391J1ZC</p>
+            <p><strong data-en="Established:" data-hi="स्थापित:">Established:</strong> 2000</p>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
         <div class="footer-copyright">
-          © <span id="year"></span> Ashita Foods. All rights reserved.
+          © <span id="year"></span> <span data-en="Ashita Foods. All rights reserved." data-hi="अशिता फूड्स। सर्वाधिकार सुरक्षित।">Ashita Foods. All rights reserved.</span>
         </div>
         <div class="footer-made">
-          Made with <i class="fas fa-heart"></i> by Ashita Foods
+          <span data-en="Made with" data-hi="बनाया गया">Made with</span> <i class="fas fa-heart"></i> <span data-en="by Ashita Foods" data-hi="अशिता फूड्स द्वारा">by Ashita Foods</span>
         </div>
       </div>
     </div>
@@ -366,7 +386,7 @@
   <!-- CART PANEL -->
   <aside id="cart-panel" class="cart-panel" aria-hidden="true" aria-label="Cart panel">
     <div class="cart-header">
-      <h3><i class="fas fa-shopping-bag"></i> Your Order</h3>
+      <h3><i class="fas fa-shopping-bag"></i> <span data-en="Your Order" data-hi="आपका ऑर्डर">Your Order</span></h3>
       <button id="cart-close" class="btn-ghost" aria-label="Close cart">
         <i class="fas fa-times"></i>
       </button>
@@ -375,21 +395,21 @@
       <ul id="cart-items" class="cart-items"></ul>
       <div class="cart-empty" id="cart-empty">
         <i class="fas fa-shopping-bag"></i>
-        <p>Your cart is empty</p>
-        <a href="#products" class="btn btn-primary">Browse Products</a>
+        <p data-en="Your cart is empty" data-hi="आपकी कार्ट खाली है">Your cart is empty</p>
+        <a href="#products" class="btn btn-primary" data-en="Browse Products" data-hi="उत्पाद देखें">Browse Products</a>
       </div>
     </div>
     <div class="cart-footer">
       <div class="cart-total">
-        <span>Total Amount:</span>
+        <span data-en="Total Amount:" data-hi="कुल राशि:">Total Amount:</span>
         <span id="cart-total">₹0</span>
       </div>
       <div class="cart-actions">
         <button id="clear-cart" class="btn btn-outline">
-          <i class="fas fa-trash"></i> <span>Clear Cart</span>
+          <i class="fas fa-trash"></i> <span data-en="Clear Cart" data-hi="कार्ट साफ करें">Clear Cart</span>
         </button>
         <button id="checkout" class="btn btn-primary">
-          <i class="fab fa-whatsapp"></i> <span>Order on WhatsApp</span>
+          <i class="fab fa-whatsapp"></i> <span data-en="Order on WhatsApp" data-hi="व्हाट्सएप पर ऑर्डर करें">Order on WhatsApp</span>
         </button>
       </div>
     </div>
