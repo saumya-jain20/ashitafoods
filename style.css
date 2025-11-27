@@ -234,7 +234,7 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
 .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
 .gallery-item { position:relative; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow); transition:var(--transition); aspect-ratio:4/3; }
 .gallery-item:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
-.gallery-item img { width:100%; height:100%; object-fit:cover; transition:var(--transition); }
+.gallery-item img { width:100%; height:100%; object-fit:contain; transition:var(--transition); }
 .gallery-item:hover img { transform:scale(1.06); }
 
 .contact { padding:6rem 0; background:#fff; }
