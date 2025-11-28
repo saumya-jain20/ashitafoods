@@ -3,15 +3,13 @@ const WHATSAPP_NUMBER = "917869595395";
 const STORAGE_KEY = 'ashita_cart_v6';
 let currentLanguage = 'en';
 
-// Products with concise, clearer descriptions and explicit per‑kg by pack
-// Note: rates keys are packaging options; values are per‑kg prices.
 const PRODUCTS = [
   {
     id: 'p1',
     name: 'Moong Papad - No.1',
     nameHi: 'मूंग पापड़ - नंबर 1',
     category: 'moong',
-    img: 'assets/papad.jpg',
+    img: 'assets/Moong Papad - No.1.jpeg',
     rates: { '500g': 122, '200g': 127 },
     desc: 'Classic everyday papad with balanced flavor and perfect crispness.',
     descHi: 'संतुलित स्वाद और परफेक्ट कुरकुरेपन के साथ क्लासिक रोजमर्रा का पापड़।'
@@ -21,7 +19,7 @@ const PRODUCTS = [
     name: 'Moong Papad - SPECIAL',
     nameHi: 'मूंग पापड़ - स्पेशल',
     category: 'moong',
-    img: 'assets/papad.jpg',
+    img: 'assets/Moong Papad - SPECIAL.jpeg',
     rates: { '500g': 153, '200g': 158 },
     desc: 'Special blend with enhanced hing flavor for distinctive taste.',
     descHi: 'विशिष्ट स्वाद के लिए बढ़े हुए हिंग स्वाद के साथ विशेष मिश्रण।'
@@ -31,7 +29,7 @@ const PRODUCTS = [
     name: 'Moong Punjabi Masala',
     nameHi: 'मूंग पंजाबी मसाला',
     category: 'moong',
-    img: 'assets/papad.jpg',
+    img: 'assets/Moong Punjabi Masala.jpeg',
     rates: { '500g': 168, '200g': 173 },
     desc: 'Robust Punjabi masala flavor with aromatic hing notes.',
     descHi: 'सुगंधित हिंग स्वाद के साथ मजबूत पंजाबी मसाला स्वाद।'
@@ -41,7 +39,7 @@ const PRODUCTS = [
     name: 'Moong Papad - SHAHI',
     nameHi: 'मूंग पापड़ - शाही',
     category: 'moong',
-    img: 'assets/papad.jpg',
+    img: 'assets/Moong Papad - SHAHI.jpeg',
     rates: { '500g': 213, '200g': 218 },
     desc: 'Royal quality with premium chawa saji and aromatic hing.',
     descHi: 'प्रीमियम चावा साजी और सुगंधित हिंग के साथ शाही गुणवत्ता।'
@@ -51,7 +49,7 @@ const PRODUCTS = [
     name: 'Moong Papad - SHAHI JAIN',
     nameHi: 'मूंग पापड़ - शाही जैन',
     category: 'moong',
-    img: 'assets/papad.jpg',
+    img: 'assets/Moong Papad - SHAHI JAIN.jpeg',
     rates: { '500g': 205, '200g': 210 },
     desc: 'Jain-friendly royal papad with rich hing flavor, no onion/garlic.',
     descHi: 'समृद्ध हिंग स्वाद के साथ जैन-अनुकूल शाही पापड़, बिना प्याज/लहसुन।'
@@ -61,7 +59,7 @@ const PRODUCTS = [
     name: 'Moong Papad - PREMIUM',
     nameHi: 'मूंग पापड़ - प्रीमियम',
     category: 'moong',
-    img: 'assets/papad.jpg',
+    img: 'assets/Moong Papad - PREMIUM.jpg',
     rates: { '500g': 225, '200g': 230 },
     desc: 'Ultra-premium with extra chawa saji for superior taste and texture.',
     descHi: 'श्रेष्ठ स्वाद और बनावट के लिए अतिरिक्त चावा साजी के साथ अल्ट्रा-प्रीमियम।'
@@ -71,7 +69,7 @@ const PRODUCTS = [
     name: 'RAJA Punjabi - Tej Masala',
     nameHi: 'राजा पंजाबी - तेज मसाला',
     category: 'moong',
-    img: 'assets/papad.jpg',
+    img: 'assets/RAJA Punjabi - Tej Masala.jpeg',
     rates: { '500g': 137, '200g': 142 },
     desc: 'Spicy tej masala variant for those who love extra heat.',
     descHi: 'उन लोगों के लिए मसालेदार तेज मसाला वेरिएंट जो अतिरिक्त तीखापन पसंद करते हैं।'
@@ -81,7 +79,7 @@ const PRODUCTS = [
     name: 'DISCO SPECIAL',
     nameHi: 'डिस्को स्पेशल',
     category: 'other',
-    img: 'assets/papad.jpg',
+    img: 'assets/DISCO SPECIAL.jpeg',
     rates: { '1kg': 155, '500g': 160 },
     desc: 'Fun mini round papads perfect for parties and kids.',
     descHi: 'पार्टियों और बच्चों के लिए बिल्कुल सही मजेदार मिनी गोल पापड़।'
@@ -91,7 +89,7 @@ const PRODUCTS = [
     name: 'Moong Katran - SPECIAL',
     nameHi: 'मूंग कतरन - स्पेशल',
     category: 'other',
-    img: 'assets/papad.jpg',
+    img: 'assets/Moong Katran - SPECIAL.jpeg',
     rates: { '1kg': 114, '500g': 119 },
     desc: 'Crunchy moong flakes ideal for frying or adding to snacks.',
     descHi: 'तलने या स्नैक्स में मिलाने के लिए आदर्श कुरकुरे मूंग फ्लेक्स।'
@@ -101,7 +99,7 @@ const PRODUCTS = [
     name: 'Chana Papad - No.1',
     nameHi: 'चना पापड़ - नंबर 1',
     category: 'chana',
-    img: 'assets/papad.jpg',
+    img: 'assets/Chana Papad - No.1.jpeg',
     rates: { '500g': 141, '200g': 146 },
     desc: 'Classic chana papad with traditional taste and perfect crisp.',
     descHi: 'पारंपरिक स्वाद और परफेक्ट कुरकुरेपन के साथ क्लासिक चना पापड़।'
@@ -111,7 +109,7 @@ const PRODUCTS = [
     name: 'Chana Papad - SHAHI',
     nameHi: 'चना पापड़ - शाही',
     category: 'chana',
-    img: 'assets/papad.jpg',
+    img: 'assets/Chana Papad - SHAHI.jpeg',
     rates: { '500g': 181, '200g': 186 },
     desc: 'Royal chana papad with khar and hing for authentic flavor.',
     descHi: 'ऑथेंटिक स्वाद के लिए खार और हिंग के साथ शाही चना पापड़।'
@@ -121,7 +119,7 @@ const PRODUCTS = [
     name: 'Chana Papad - SPECIAL',
     nameHi: 'चना पापड़ - स्पेशल',
     category: 'chana',
-    img: 'assets/papad.jpg',
+    img: 'assets/Chana Papad - SPECIAL.jpeg',
     rates: { '500g': 146, '200g': 151 },
     desc: 'Special sweet variant with khar for unique taste profile.',
     descHi: 'अनोखे स्वाद प्रोफाइल के लिए खार के साथ विशेष मीठा वेरिएंट।'
@@ -131,7 +129,7 @@ const PRODUCTS = [
     name: 'Chana-SPECIAL Garlic',
     nameHi: 'चना-स्पेशल लहसुन',
     category: 'chana',
-    img: 'assets/papad.jpg',
+    img: 'assets/Chana-SPECIAL Garlic.jpeg',
     rates: { '500g': 158, '200g': 163 },
     desc: 'Garlic infused chana papad with aromatic garlic flavor.',
     descHi: 'सुगंधित लहसुन स्वाद के साथ लहसुन युक्त चना पापड़।'
@@ -141,7 +139,7 @@ const PRODUCTS = [
     name: 'Moong-Shahi Garlic',
     nameHi: 'मूंग-शाही लहसुन',
     category: 'moong',
-    img: 'assets/papad.jpg',
+    img: 'assets/Moong-Shahi Garlic.jpeg',
     rates: { '500g': 213, '200g': 218 },
     desc: 'Premium moong papad with generous garlic infusion.',
     descHi: 'उदार लहसुन इन्फ्यूजन के साथ प्रीमियम मूंग पापड़।'
@@ -151,7 +149,7 @@ const PRODUCTS = [
     name: 'Dollar Moong',
     nameHi: 'डॉलर मूंग',
     category: 'moong',
-    img: 'assets/papad.jpg',
+    img: 'assets/Dollar Moong.jpg',
     rates: { '1kg': 130 },
     desc: 'Uniform dollar-shaped moong papads for elegant presentation.',
     descHi: 'स्टाइलिश प्रस्तुति के लिए एकसमान डॉलर के आकार के मूंग पापड़।'
@@ -161,7 +159,7 @@ const PRODUCTS = [
     name: 'Dollar Chana',
     nameHi: 'डॉलर चना',
     category: 'chana',
-    img: 'assets/papad.jpg',
+    img: 'assets/Dollar Chana.jpg',
     rates: { '1kg': 147 },
     desc: 'Round chana discs with bold taste and golden crispness.',
     descHi: 'बोल्ड स्वाद और गोल्डन कुरकुरेपन के साथ गोल चना डिस्क।'
