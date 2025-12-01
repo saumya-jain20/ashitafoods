@@ -72,6 +72,40 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
 .btn-whatsapp-full:hover, .btn-whatsapp:hover { background:#128C7E; transform:translateY(-1px); }
 
 /* Header */
+.btn-cart {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+
+.btn-cart .cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-cart:hover {
+  background: var(--primary);
+  color: #fff;
+}
 .site-header { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); backdrop-filter:blur(10px); border-bottom:1px solid var(--border); z-index:1000; transition:var(--transition); }
 .site-header.scrolled { background:rgba(255,255,255,0.98); box-shadow:var(--shadow); }
 .nav-wrap { display:flex; justify-content:space-between; align-items:center; padding:1rem 0; position:relative; }
@@ -92,8 +126,6 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
 .nav-actions { display:flex; gap:0.8rem; align-items:center; flex-shrink: 0; }
 .btn-whatsapp { background:#25D366; color:#fff; border:none; padding:8px 16px; border-radius:var(--radius); font-weight:600; cursor:pointer; transition:var(--transition); display:flex; align-items:center; gap:6px; }
 .btn-whatsapp:hover { background:#128C7E; transform:translateY(-1px); }
-.btn-cart { background:transparent; border:2px solid var(--primary); color:var(--primary); padding:8px 16px; border-radius:var(--radius); font-weight:600; cursor:pointer; transition:var(--transition); display:flex; align-items:center; gap:6px; position:relative; }
-.btn-cart:hover { background:var(--primary); color:#fff; }
 
 /* Hero - Improved for mobile */
 .hero { padding:140px 0 80px; position:relative; background:linear-gradient(135deg,var(--bg-dark) 0%, var(--bg) 100%); overflow:hidden; }
@@ -132,7 +164,7 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
 .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.5rem; }
 .card { background:#fff; border-radius:var(--radius-lg); padding:1.25rem; box-shadow:var(--shadow); transition:var(--transition); border:1px solid var(--border); display:flex; flex-direction:column; height:100%; }
 .card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
-.card img { width:100%; height:200px; object-fit:contain; border-radius:var(--radius); margin-bottom:0.8rem; }
+.card img { width:100%; height:200px; object-fit:contain; border-radius:var(--radius); margin-bottom:0.8rem; background: var(--bg-dark); padding: 0.5rem; object-position: center; }
 .card h3 { font-size:1.2rem; color:var(--primary); margin-bottom:0.4rem; min-height:2.6rem; }
 .card .desc { color:var(--text-light); margin-bottom:0.8rem; flex-grow:1; font-size:0.95rem; }
 .card .price-small { background:var(--bg-dark); padding:0.7rem; border-radius:var(--radius); margin-bottom:0.9rem; font-size:0.9rem; color:var(--text); font-weight:600; }
@@ -234,7 +266,7 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
 .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; }
 .gallery-item { position:relative; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow); transition:var(--transition); aspect-ratio:4/3; }
 .gallery-item:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
-.gallery-item img { width:100%; height:100%; object-fit:contain; transition:var(--transition); }
+.gallery-item img { width:100%; height:100%; object-fit:contain; background: var(--bg-light); padding: 0.5rem; transition:var(--transition); }
 .gallery-item:hover img { transform:scale(1.06); }
 
 .contact { padding:6rem 0; background:#fff; }
@@ -488,6 +520,7 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
   /* Adjust button sizes for mobile */
   .mobile-actions .btn-whatsapp,
   .mobile-actions .btn-cart {
+    position: relative;
     padding: 8px;
     width: 40px;
     height: 40px;
@@ -500,7 +533,7 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
     position: relative;
   }
 
-  .mobile-actions #cart-count {
+  .mobile-actions .cart-count {
     position: absolute;
     top: -5px;
     right: -5px;
@@ -538,4 +571,13 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
     width: 36px;
     height: 36px;
   }
+}
+
+.btn-cart:active, .btn-whatsapp:active {
+  transform: translateY(0);
+}
+
+.btn.loading {
+  opacity: 0.7;
+  pointer-events: none;
 }

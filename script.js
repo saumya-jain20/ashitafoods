@@ -171,8 +171,10 @@ const grid = document.getElementById('product-grid');
 const filters = document.querySelectorAll('.filter');
 const searchInput = document.getElementById('search');
 const cartToggle = document.getElementById('cart-toggle');
+const cartToggleMobile = document.getElementById('cart-toggle-mobile');
 const cartPanel = document.getElementById('cart-panel');
 const cartCountEl = document.getElementById('cart-count');
+const cartCountElMobile = document.getElementById('cart-count-mobile');
 const cartItemsEl = document.getElementById('cart-items');
 const cartTotalEl = document.getElementById('cart-total');
 const cartEmptyEl = document.getElementById('cart-empty');
@@ -185,6 +187,7 @@ const navActions = document.querySelector('.nav-actions');
 const backToTopBtn = document.getElementById('back-to-top');
 const whatsappBtns = [
   document.getElementById('whatsapp-btn'),
+  document.getElementById('whatsapp-btn-mobile'),
   document.getElementById('hero-whatsapp'),
   document.getElementById('contact-wa'),
   document.getElementById('footer-whatsapp')
@@ -270,7 +273,7 @@ function renderProducts(){
     const productDesc = currentLanguage === 'hi' ? (p.descHi || p.desc) : p.desc;
 
     card.innerHTML = `
-      <img src="${p.img}" alt="${productName}" loading="lazy" onerror="this.src='assets/placeholder.jpg'">
+      <img src="${p.img}" alt="${productName}" loading="lazy" onerror="this.onerror=null; this.src='assets/papad.jpg';">
       <h3>${productName}</h3>
       <p class="desc">${productDesc}</p>
       <div class="price-small">
@@ -326,7 +329,8 @@ function renderCart(){
   const total = cart.reduce((s, it) => s + (it.rate * it.qty), 0);
   cartTotalEl.textContent = rup(total);
   const totalQty = cart.reduce((s, it) => s + it.qty, 0);
-  cartCountEl.textContent = totalQty;
+  if(cartCountEl) cartCountEl.textContent = totalQty;
+  if(cartCountElMobile) cartCountElMobile.textContent = totalQty;
   // Also update mobile cart count
   const mobileCartCount = document.getElementById('cart-count');
   if(mobileCartCount) mobileCartCount.textContent = totalQty;
@@ -368,7 +372,8 @@ function closeCartPanel(){
   cartPanel.classList.remove('active');
   mobileNavOverlay.classList.remove('active');
   document.body.style.overflow = 'auto';
-  cartToggle.setAttribute('aria-expanded','false');
+  if(cartToggle) cartToggle.setAttribute('aria-expanded','false');
+  if(cartToggleMobile) cartToggleMobile.setAttribute('aria-expanded','false');
   cartPanel.setAttribute('aria-hidden','true');
 }
 
@@ -522,7 +527,8 @@ function init(){
   });
 
   // Cart controls
-  cartToggle.addEventListener('click', openCartPanel);
+  if (cartToggle) cartToggle.addEventListener('click', openCartPanel);
+  if (cartToggleMobile) cartToggleMobile.addEventListener('click', openCartPanel);
   document.getElementById('cart-close').addEventListener('click', closeCartPanel);
   clearCartBtn.addEventListener('click', () => {
     if(cart.length === 0) return;
@@ -592,6 +598,7 @@ function init(){
     if(cartPanel.classList.contains('active') &&
        !cartPanel.contains(e.target) &&
        e.target !== cartToggle &&
+       e.target !== cartToggleMobile &&
        !e.target.closest('.btn-cart')){
       closeCartPanel();
     }
