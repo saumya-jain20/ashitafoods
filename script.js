@@ -303,7 +303,7 @@ function renderProducts(){
 function renderCart(){
   cartItemsEl.innerHTML = '';
   if(cart.length === 0){
-    cartEmptyEl.style.display = 'block';
+    cartEmptyEl.style.display = 'flex';
     cartItemsEl.style.display = 'none';
   } else {
     cartEmptyEl.style.display = 'none';
@@ -365,16 +365,24 @@ function openCartPanel(){
   cartPanel.classList.add('active');
   mobileNavOverlay.classList.add('active');
   document.body.style.overflow = 'hidden';
-  cartToggle.setAttribute('aria-expanded','true');
-  cartPanel.setAttribute('aria-hidden','false');
+  cartPanel.removeAttribute('aria-hidden');
+  if(cartToggle) cartToggle.setAttribute('aria-expanded','true');
+  if(cartToggleMobile) cartToggleMobile.setAttribute('aria-expanded','true');
+  setTimeout(() => {
+    const closeBtn = document.getElementById('cart-close');
+    if(closeBtn) closeBtn.focus();
+  }, 100);
 }
+
 function closeCartPanel(){
   cartPanel.classList.remove('active');
   mobileNavOverlay.classList.remove('active');
   document.body.style.overflow = 'auto';
+  cartPanel.setAttribute('aria-hidden', 'true');
   if(cartToggle) cartToggle.setAttribute('aria-expanded','false');
   if(cartToggleMobile) cartToggleMobile.setAttribute('aria-expanded','false');
-  cartPanel.setAttribute('aria-hidden','true');
+  const activeToggle = window.innerWidth <= 768 ? cartToggleMobile : cartToggle;
+  if(activeToggle) activeToggle.focus();
 }
 
 // Mobile menu toggle
@@ -383,18 +391,25 @@ function toggleMobileMenu(){
   mobileMenuToggle.classList.toggle('active');
   mobileNavOverlay.classList.toggle('active');
   navActions.classList.toggle('mobile-visible', isActive);
+  
+  // Update aria attributes
   mobileMenuToggle.setAttribute('aria-expanded', String(isActive));
-  const spans = mobileMenuToggle.querySelectorAll('span');
+  
   if(isActive){
-    spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
-    spans[1].style.opacity = '0';
-    spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
     document.body.style.overflow = 'hidden';
+    mobileMenuToggle.querySelectorAll('span')[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+    mobileMenuToggle.querySelectorAll('span')[1].style.opacity = '0';
+    mobileMenuToggle.querySelectorAll('span')[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+    setTimeout(() => {
+      const firstNavLink = mainNav.querySelector('.nav-link');
+      if(firstNavLink) firstNavLink.focus();
+    }, 100);
   } else {
-    spans[0].style.transform = 'none';
-    spans[1].style.opacity = '1';
-    spans[2].style.transform = 'none';
     document.body.style.overflow = 'auto';
+    mobileMenuToggle.querySelectorAll('span')[0].style.transform = 'none';
+    mobileMenuToggle.querySelectorAll('span')[1].style.opacity = '1';
+    mobileMenuToggle.querySelectorAll('span')[2].style.transform = 'none';
+    mobileMenuToggle.focus();
   }
 }
 
@@ -611,6 +626,51 @@ function init(){
       if(mainNav.classList.contains('active')) toggleMobileMenu();
     }
   });
+
+  // Handle browse products button in cart
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('browse-products-btn') || 
+        e.target.closest('.browse-products-btn')) {
+      closeCartPanel();
+      // Smooth scroll to products section
+      const productsSection = document.getElementById('products');
+      if (productsSection) {
+        setTimeout(() => {
+          productsSection.scrollIntoView({ behavior: 'smooth' });
+        }, 300);
+      }
+    }
+  });
+
+  // Trap focus within cart panel when open
+  function trapCartFocus(e) {
+    if(!cartPanel.classList.contains('active')) return;
+    
+    const focusableElements = cartPanel.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const firstFocusable = focusableElements[0];
+    const lastFocusable = focusableElements[focusableElements.length - 1];
+    
+    if(e.key === 'Tab') {
+      if(e.shiftKey) {
+        // Shift + Tab
+        if(document.activeElement === firstFocusable) {
+          e.preventDefault();
+          lastFocusable.focus();
+        }
+      } else {
+        // Tab
+        if(document.activeElement === lastFocusable) {
+          e.preventDefault();
+          firstFocusable.focus();
+        }
+      }
+    }
+  }
+
+  // Add focus trap event listener
+  document.addEventListener('keydown', trapCartFocus);
 
   handleResize();
   window.addEventListener('resize', handleResize);
