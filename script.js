@@ -1,18 +1,18 @@
 // Config
 const WHATSAPP_NUMBER = "917869595395";
-const STORAGE_KEY = 'ashita_cart_v6';
 let currentLanguage = 'en';
 
 const PRODUCTS = [
   {
     id: 'p1',
-    name: 'Moong Papad - No.1',
-    nameHi: 'मूंग पापड़ - नंबर 1',
+    name: 'Moong Papad - SHAHI',
+    nameHi: 'मूंग पापड़ - शाही',
     category: 'moong',
-    img: 'assets/Moong Papad - No.1.jpeg',
-    rates: { '500g': 122, '200g': 127 },
-    desc: 'Classic everyday papad with balanced flavor and perfect crispness.',
-    descHi: 'संतुलित स्वाद और परफेक्ट कुरकुरेपन के साथ क्लासिक रोजमर्रा का पापड़।'
+    img: 'assets/Moong Papad - SHAHI.jpeg',
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['500g', '200g'],
+    desc: 'Royal quality with premium chawa saji and aromatic hing.',
+    descHi: 'प्रीमियम चावा साजी और सुगंधित हिंग के साथ शाही गुणवत्ता।'
   },
   {
     id: 'p2',
@@ -20,7 +20,8 @@ const PRODUCTS = [
     nameHi: 'मूंग पापड़ - स्पेशल',
     category: 'moong',
     img: 'assets/Moong Papad - SPECIAL.jpeg',
-    rates: { '500g': 153, '200g': 158 },
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['500g', '200g'],
     desc: 'Special blend with enhanced hing flavor for distinctive taste.',
     descHi: 'विशिष्ट स्वाद के लिए बढ़े हुए हिंग स्वाद के साथ विशेष मिश्रण।'
   },
@@ -30,19 +31,21 @@ const PRODUCTS = [
     nameHi: 'मूंग पंजाबी मसाला',
     category: 'moong',
     img: 'assets/Moong Punjabi Masala.jpeg',
-    rates: { '500g': 168, '200g': 173 },
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['500g', '200g'],
     desc: 'Robust Punjabi masala flavor with aromatic hing notes.',
     descHi: 'सुगंधित हिंग स्वाद के साथ मजबूत पंजाबी मसाला स्वाद।'
   },
   {
     id: 'p4',
-    name: 'Moong Papad - SHAHI',
-    nameHi: 'मूंग पापड़ - शाही',
+    name: 'Moong Papad - No.1',
+    nameHi: 'मूंग पापड़ - नंबर 1',
     category: 'moong',
-    img: 'assets/Moong Papad - SHAHI.jpeg',
-    rates: { '500g': 213, '200g': 218 },
-    desc: 'Royal quality with premium chawa saji and aromatic hing.',
-    descHi: 'प्रीमियम चावा साजी और सुगंधित हिंग के साथ शाही गुणवत्ता।'
+    img: 'assets/Moong Papad - No.1.jpeg',
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['500g', '200g'],
+    desc: 'Classic everyday papad with balanced flavor and perfect crispness.',
+    descHi: 'संतुलित स्वाद और परफेक्ट कुरकुरेपन के साथ क्लासिक रोजमर्रा का पापड़।'
   },
   {
     id: 'p5',
@@ -50,7 +53,8 @@ const PRODUCTS = [
     nameHi: 'मूंग पापड़ - शाही जैन',
     category: 'moong',
     img: 'assets/Moong Papad - SHAHI JAIN.jpeg',
-    rates: { '500g': 205, '200g': 210 },
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['500g', '200g'],
     desc: 'Jain-friendly royal papad with rich hing flavor, no onion/garlic.',
     descHi: 'समृद्ध हिंग स्वाद के साथ जैन-अनुकूल शाही पापड़, बिना प्याज/लहसुन।'
   },
@@ -60,7 +64,8 @@ const PRODUCTS = [
     nameHi: 'मूंग पापड़ - प्रीमियम',
     category: 'moong',
     img: 'assets/Moong Papad - PREMIUM.jpeg',
-    rates: { '500g': 225, '200g': 230 },
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['500g', '200g'],
     desc: 'Ultra-premium with extra chawa saji for superior taste and texture.',
     descHi: 'श्रेष्ठ स्वाद और बनावट के लिए अतिरिक्त चावा साजी के साथ अल्ट्रा-प्रीमियम।'
   },
@@ -70,7 +75,8 @@ const PRODUCTS = [
     nameHi: 'राजा पंजाबी - तेज मसाला',
     category: 'moong',
     img: 'assets/RAJA Punjabi - Tej Masala.jpeg',
-    rates: { '500g': 137, '200g': 142 },
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['500g', '200g'],
     desc: 'Spicy tej masala variant for those who love extra heat.',
     descHi: 'उन लोगों के लिए मसालेदार तेज मसाला वेरिएंट जो अतिरिक्त तीखापन पसंद करते हैं।'
   },
@@ -80,7 +86,8 @@ const PRODUCTS = [
     nameHi: 'डिस्को स्पेशल',
     category: 'other',
     img: 'assets/DISCO SPECIAL.jpeg',
-    rates: { '1kg': 155, '500g': 160 },
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['1kg', '500g'],
     desc: 'Fun mini round papads perfect for parties and kids.',
     descHi: 'पार्टियों और बच्चों के लिए बिल्कुल सही मजेदार मिनी गोल पापड़।'
   },
@@ -90,7 +97,8 @@ const PRODUCTS = [
     nameHi: 'मूंग कतरन - स्पेशल',
     category: 'other',
     img: 'assets/Moong Katran - SPECIAL.jpeg',
-    rates: { '1kg': 114, '500g': 119 },
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['1kg', '500g'],
     desc: 'Crunchy moong flakes ideal for frying or adding to snacks.',
     descHi: 'तलने या स्नैक्स में मिलाने के लिए आदर्श कुरकुरे मूंग फ्लेक्स।'
   },
@@ -100,7 +108,8 @@ const PRODUCTS = [
     nameHi: 'चना पापड़ - नंबर 1',
     category: 'chana',
     img: 'assets/Chana Papad - No.1.jpeg',
-    rates: { '500g': 141, '200g': 146 },
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['500g', '200g'],
     desc: 'Classic chana papad with traditional taste and perfect crisp.',
     descHi: 'पारंपरिक स्वाद और परफेक्ट कुरकुरेपन के साथ क्लासिक चना पापड़।'
   },
@@ -110,7 +119,8 @@ const PRODUCTS = [
     nameHi: 'चना पापड़ - शाही',
     category: 'chana',
     img: 'assets/Chana Papad - SHAHI.jpeg',
-    rates: { '500g': 181, '200g': 186 },
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['500g', '200g'],
     desc: 'Royal chana papad with khar and hing for authentic flavor.',
     descHi: 'ऑथेंटिक स्वाद के लिए खार और हिंग के साथ शाही चना पापड़।'
   },
@@ -120,7 +130,8 @@ const PRODUCTS = [
     nameHi: 'चना पापड़ - स्पेशल',
     category: 'chana',
     img: 'assets/Chana Papad - SPL.jpeg',
-    rates: { '500g': 146, '200g': 151 },
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['500g', '200g'],
     desc: 'Special sweet variant with khar for unique taste profile.',
     descHi: 'अनोखे स्वाद प्रोफाइल के लिए खार के साथ विशेष मीठा वेरिएंट।'
   },
@@ -130,7 +141,8 @@ const PRODUCTS = [
     nameHi: 'चना-स्पेशल लहसुन',
     category: 'chana',
     img: 'assets/Chana-SPECIAL Garlic.jpeg',
-    rates: { '500g': 158, '200g': 163 },
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['500g', '200g'],
     desc: 'Garlic infused chana papad with aromatic garlic flavor.',
     descHi: 'सुगंधित लहसुन स्वाद के साथ लहसुन युक्त चना पापड़।'
   },
@@ -140,7 +152,8 @@ const PRODUCTS = [
     nameHi: 'मूंग-शाही लहसुन',
     category: 'moong',
     img: 'assets/Moong-Shahi Garlic.jpeg',
-    rates: { '500g': 213, '200g': 218 },
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['500g', '200g'],
     desc: 'Premium moong papad with generous garlic infusion.',
     descHi: 'उदार लहसुन इन्फ्यूजन के साथ प्रीमियम मूंग पापड़।'
   },
@@ -150,7 +163,8 @@ const PRODUCTS = [
     nameHi: 'डॉलर मूंग',
     category: 'other',
     img: 'assets/Dollar Moong.jpg',
-    rates: { '1kg': 130 },
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['1kg'],
     desc: 'Uniform dollar-shaped moong papads for elegant presentation.',
     descHi: 'स्टाइलिश प्रस्तुति के लिए एकसमान डॉलर के आकार के मूंग पापड़।'
   },
@@ -160,7 +174,8 @@ const PRODUCTS = [
     nameHi: 'डॉलर चना',
     category: 'other',
     img: 'assets/Dollar Chana.jpg',
-    rates: { '1kg': 147 },
+    sizes: ['3.5"', '5"', '7"'],
+    packaging: ['1kg'],
     desc: 'Round chana discs with bold taste and golden crispness.',
     descHi: 'बोल्ड स्वाद और गोल्डन कुरकुरेपन के साथ गोल चना डिस्क।'
   }
@@ -170,16 +185,6 @@ const PRODUCTS = [
 const grid = document.getElementById('product-grid');
 const filters = document.querySelectorAll('.filter');
 const searchInput = document.getElementById('search');
-const cartToggle = document.getElementById('cart-toggle');
-const cartToggleMobile = document.getElementById('cart-toggle-mobile');
-const cartPanel = document.getElementById('cart-panel');
-const cartCountEl = document.getElementById('cart-count');
-const cartCountElMobile = document.getElementById('cart-count-mobile');
-const cartItemsEl = document.getElementById('cart-items');
-const cartTotalEl = document.getElementById('cart-total');
-const cartEmptyEl = document.getElementById('cart-empty');
-const clearCartBtn = document.getElementById('clear-cart');
-const checkoutBtn = document.getElementById('checkout');
 const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
 const mainNav = document.getElementById('main-nav');
 const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
@@ -194,14 +199,11 @@ const whatsappBtns = [
 ].filter(Boolean);
 const langButtons = document.querySelectorAll('.lang-btn');
 
-let cart = [];
 let currentFilter = 'all';
 let currentSearch = '';
 
 // Utils
 function rup(n){ return '₹' + Number(n).toLocaleString('en-IN', { maximumFractionDigits: 0 }); }
-function loadCart(){ try{ const raw=localStorage.getItem(STORAGE_KEY); if(raw) cart=JSON.parse(raw);}catch(e){ cart=[]; } }
-function saveCart(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(cart)); }
 
 // Language switching
 function switchLanguage(lang) {
@@ -242,7 +244,7 @@ function filterProducts(){
   return list;
 }
 
-// Render products: with improved packaging and quantity input
+// Render products: display-only with sizes and packaging
 function renderProducts(){
   const items = filterProducts();
   grid.innerHTML = '';
@@ -261,12 +263,15 @@ function renderProducts(){
     card.className = 'card';
     card.dataset.id = p.id;
 
-    const packOptions = Object.keys(p.rates)
-      .map(s => `<option value="${s}">${s}</option>`).join('');
+    // Create size items
+    const sizeItems = p.sizes.map(size => 
+      `<li class="size-item">${size}</li>`
+    ).join('');
 
-    const priceDisplay = Object.entries(p.rates)
-      .map(([k,v]) => `${k}: ${rup(v)}/kg`)
-      .join(' • ');
+    // Create packaging items
+    const packagingItems = p.packaging.map(pack => 
+      `<li class="packaging-item">${pack}</li>`
+    ).join('');
 
     // Use bilingual names and descriptions
     const productName = currentLanguage === 'hi' ? (p.nameHi || p.name) : p.name;
@@ -276,113 +281,31 @@ function renderProducts(){
       <img src="${p.img}" alt="${productName}" loading="lazy" onerror="this.onerror=null; this.src='assets/papad.jpg';">
       <h3>${productName}</h3>
       <p class="desc">${productDesc}</p>
-      <div class="price-small">
-        <i class="fas fa-tag"></i> ${priceDisplay}
-      </div>
-      <div class="actions">
-        <div class="packaging-quantity-container">
-          <div class="packaging-row">
-            <span class="packaging-label">${currentLanguage === 'en' ? 'Packaging Size:' : 'पैकेजिंग आकार:'}</span>
-            <select class="pack-select" aria-label="${currentLanguage === 'en' ? 'Select packaging type' : 'पैकेजिंग प्रकार चुनें'}">${packOptions}</select>
-          </div>
-          <div class="quantity-row">
-            <span class="quantity-label">${currentLanguage === 'en' ? 'Quantity (kg):' : 'मात्रा (किलो):'}</span>
-            <input type="number" class="qty-input" min="0.5" step="1" placeholder="${currentLanguage === 'en' ? 'Enter kg' : 'किलो दर्ज करें'}" value="">
-          </div>
+      
+      <div class="product-specs">
+        <!-- Available Sizes Section -->
+        <div class="spec-section">
+          <div class="section-label">${currentLanguage === 'en' ? 'Available Sizes:' : 'उपलब्ध आकार:'}</div>
+          <ul class="sizes-list">
+            ${sizeItems}
+          </ul>
         </div>
-        <button class="add-btn" aria-label="${currentLanguage === 'en' ? 'Add to cart' : 'कार्ट में जोड़ें'}">
-          <i class="fas fa-cart-plus"></i> ${currentLanguage === 'en' ? 'Add to Cart' : 'कार्ट में जोड़ें'}
-        </button>
+        
+        <!-- Packaging Options Section -->
+        <div class="spec-section">
+          <div class="section-label">${currentLanguage === 'en' ? 'Packaging Options:' : 'पैकेजिंग विकल्प:'}</div>
+          <ul class="packaging-list">
+            ${packagingItems}
+          </ul>
+        </div>
+      </div>
+      
+      <div class="contact-info" style="margin-top: 1rem; text-align: center; padding-top: 0.8rem; border-top: 1px dashed var(--border);">
+        <small style="color: var(--text-light); font-style: italic;">${currentLanguage === 'en' ? 'Contact us for pricing and orders' : 'मूल्य और ऑर्डर के लिए हमसे संपर्क करें'}</small>
       </div>
     `;
     grid.appendChild(card);
   });
-}
-
-// Cart render
-function renderCart(){
-  cartItemsEl.innerHTML = '';
-  if(cart.length === 0){
-    cartEmptyEl.style.display = 'flex';
-    cartItemsEl.style.display = 'none';
-  } else {
-    cartEmptyEl.style.display = 'none';
-    cartItemsEl.style.display = 'block';
-    cart.forEach((item, index) => {
-      const li = document.createElement('li');
-      const productName = currentLanguage === 'hi' 
-        ? (PRODUCTS.find(p => p.id === item.id)?.nameHi || item.name)
-        : item.name;
-      li.innerHTML = `
-        <div class="cart-item-info">
-          <h4>${productName}</h4>
-          <p>${item.pack} • ${item.qty}kg × ${rup(item.rate)}/kg</p>
-          <strong>${rup(item.rate * item.qty)}</strong>
-        </div>
-        <button data-index="${index}" class="remove-btn" aria-label="${currentLanguage === 'en' ? 'Remove item' : 'आइटम हटाएं'}">
-          <i class="fas fa-times"></i>
-        </button>
-      `;
-      cartItemsEl.appendChild(li);
-    });
-  }
-  const total = cart.reduce((s, it) => s + (it.rate * it.qty), 0);
-  cartTotalEl.textContent = rup(total);
-  const totalQty = cart.reduce((s, it) => s + it.qty, 0);
-  if(cartCountEl) cartCountEl.textContent = totalQty;
-  if(cartCountElMobile) cartCountElMobile.textContent = totalQty;
-  // Also update mobile cart count
-  const mobileCartCount = document.getElementById('cart-count');
-  if(mobileCartCount) mobileCartCount.textContent = totalQty;
-}
-
-// Cart ops
-function addToCart(product, pack, qtyKg){
-  const qty = Number(qtyKg);
-  if(qty <= 0){ 
-    showNotification(
-      currentLanguage === 'en' ? 'Please enter a valid quantity' : 'कृपया एक वैध मात्रा दर्ज करें', 
-      'error'
-    ); 
-    return; 
-  }
-  const key = `${product.id}__${pack}`;
-  const rate = product.rates[pack];
-  const existing = cart.find(it => it.key === key);
-  if(existing){ existing.qty += qty; }
-  else {
-    cart.push({ key, id:product.id, name:product.name, pack, qty, rate });
-  }
-  saveCart(); renderCart(); openCartPanel();
-  showNotification(
-    `${product.name} (${pack}) - ${qty}kg ${currentLanguage === 'en' ? 'added!' : 'जोड़ा गया!'}`, 
-    'success'
-  );
-}
-
-// Panel control
-function openCartPanel(){
-  cartPanel.classList.add('active');
-  mobileNavOverlay.classList.add('active');
-  document.body.style.overflow = 'hidden';
-  cartPanel.removeAttribute('aria-hidden');
-  if(cartToggle) cartToggle.setAttribute('aria-expanded','true');
-  if(cartToggleMobile) cartToggleMobile.setAttribute('aria-expanded','true');
-  setTimeout(() => {
-    const closeBtn = document.getElementById('cart-close');
-    if(closeBtn) closeBtn.focus();
-  }, 100);
-}
-
-function closeCartPanel(){
-  cartPanel.classList.remove('active');
-  mobileNavOverlay.classList.remove('active');
-  document.body.style.overflow = 'auto';
-  cartPanel.setAttribute('aria-hidden', 'true');
-  if(cartToggle) cartToggle.setAttribute('aria-expanded','false');
-  if(cartToggleMobile) cartToggleMobile.setAttribute('aria-expanded','false');
-  const activeToggle = window.innerWidth <= 768 ? cartToggleMobile : cartToggle;
-  if(activeToggle) activeToggle.focus();
 }
 
 // Mobile menu toggle
@@ -480,9 +403,7 @@ function setupFooterFilterLinks(){
 
 // Init
 function init(){
-  loadCart();
   renderProducts();
-  renderCart();
   setupScrollEffects();
   setupFooterFilterLinks();
   document.getElementById('year').textContent = new Date().getFullYear();
@@ -492,7 +413,6 @@ function init(){
     btn.addEventListener('click', () => {
       switchLanguage(btn.dataset.lang);
       renderProducts();
-      renderCart();
     });
   });
 
@@ -513,77 +433,10 @@ function init(){
     renderProducts();
   });
 
-  // Add to cart with custom quantity
-  grid.addEventListener('click', e => {
-    const card = e.target.closest('.card');
-    if(!card) return;
-    const productId = card.dataset.id;
-    const product = PRODUCTS.find(x => x.id === productId);
-    if(!product) return;
-
-    if(e.target.classList.contains('add-btn') || e.target.closest('.add-btn')){
-      const packSelect = card.querySelector('.pack-select');
-      const qtyInput = card.querySelector('.qty-input');
-      const pack = packSelect.value;
-      const qty = parseFloat(qtyInput.value);
-      
-      if(isNaN(qty) || qty <= 0) {
-        showNotification(
-          currentLanguage === 'en' ? 'Please enter a valid quantity' : 'कृपया एक वैध मात्रा दर्ज करें', 
-          'error'
-        );
-        qtyInput.focus();
-        return;
-      }
-      
-      addToCart(product, pack, qty);
-      qtyInput.value = ""; // Reset to empty after adding
-    }
-  });
-
-  // Cart controls
-  if (cartToggle) cartToggle.addEventListener('click', openCartPanel);
-  if (cartToggleMobile) cartToggleMobile.addEventListener('click', openCartPanel);
-  document.getElementById('cart-close').addEventListener('click', closeCartPanel);
-  clearCartBtn.addEventListener('click', () => {
-    if(cart.length === 0) return;
-    if(confirm(currentLanguage === 'en' ? 'Clear your cart?' : 'अपनी कार्ट साफ करें?')){
-      cart = []; saveCart(); renderCart();
-    }
-  });
-  cartItemsEl.addEventListener('click', e => {
-    if(e.target.classList.contains('remove-btn') || e.target.closest('.remove-btn')){
-      const btn = e.target.classList.contains('remove-btn') ? e.target : e.target.closest('.remove-btn');
-      const index = parseInt(btn.dataset.index, 10);
-      cart.splice(index, 1); saveCart(); renderCart();
-    }
-  });
-
-  // Checkout -> WhatsApp
-  checkoutBtn.addEventListener('click', () => {
-    if(cart.length === 0) return showNotification(
-      currentLanguage === 'en' ? 'Your cart is empty!' : 'आपकी कार्ट खाली है!', 
-      'error'
-    );
-    let message = currentLanguage === 'en' 
-      ? "Hello Ashita Foods! I'd like to place an order:\n\n"
-      : "नमस्ते अशिता फूड्स! मैं एक ऑर्डर देना चाहता/चाहती हूं:\n\n";
-    
-    cart.forEach((item, idx) => {
-      message += `${idx+1}. ${item.name} | ${item.pack} • ${item.qty}kg = ${rup(item.rate * item.qty)}\n`;
-    });
-    message += `\n${currentLanguage === 'en' ? 'Total Amount:' : 'कुल राशि:'} ${rup(cart.reduce((s, it) => s + (it.rate * it.qty), 0))}`;
-    message += `\n\n${currentLanguage === 'en' ? 'Delivery Address:' : 'डिलीवरी पता:'} [${currentLanguage === 'en' ? 'Please provide your complete address' : 'कृपया अपना पूरा पता प्रदान करें'}]`;
-    message += `\n${currentLanguage === 'en' ? 'Contact Number:' : 'संपर्क नंबर:'} [${currentLanguage === 'en' ? 'Your contact number' : 'आपका संपर्क नंबर'}]`;
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
-  });
-
   // Mobile menu + overlay close
   if(mobileMenuToggle){ mobileMenuToggle.addEventListener('click', toggleMobileMenu); }
   if(mobileNavOverlay){
     mobileNavOverlay.addEventListener('click', () => {
-      if(cartPanel.classList.contains('active')) closeCartPanel();
       if(mainNav.classList.contains('active')) toggleMobileMenu();
     });
   }
@@ -599,8 +452,8 @@ function init(){
   whatsappBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const message = currentLanguage === 'en'
-        ? "Hello Ashita Foods! I'm interested in your papad products and would like to know more."
-        : "नमस्ते अशिता फूड्स! मुझे आपके पापड़ उत्पादों में रुचि है और मैं और जानना चाहता/चाहती हूं।";
+        ? "Hello Ashita Foods! I'm interested in your papad products and would like to know more about pricing and availability."
+        : "नमस्ते अशिता फूड्स! मुझे आपके पापड़ उत्पादों में रुचि है और मैं मूल्य और उपलब्धता के बारे में और जानना चाहता/चाहती हूं।";
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
     });
   });
@@ -608,69 +461,12 @@ function init(){
   // Back to top
   backToTopBtn.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
 
-  // Global clicks to close cart if clicked outside
-  document.addEventListener('click', (e) => {
-    if(cartPanel.classList.contains('active') &&
-       !cartPanel.contains(e.target) &&
-       e.target !== cartToggle &&
-       e.target !== cartToggleMobile &&
-       !e.target.closest('.btn-cart')){
-      closeCartPanel();
-    }
-  });
-
-  // ESC to close cart
+  // ESC to close mobile menu
   document.addEventListener('keydown', (e) => {
     if(e.key === 'Escape'){
-      if(cartPanel.classList.contains('active')) closeCartPanel();
       if(mainNav.classList.contains('active')) toggleMobileMenu();
     }
   });
-
-  // Handle browse products button in cart
-  document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('browse-products-btn') || 
-        e.target.closest('.browse-products-btn')) {
-      closeCartPanel();
-      // Smooth scroll to products section
-      const productsSection = document.getElementById('products');
-      if (productsSection) {
-        setTimeout(() => {
-          productsSection.scrollIntoView({ behavior: 'smooth' });
-        }, 300);
-      }
-    }
-  });
-
-  // Trap focus within cart panel when open
-  function trapCartFocus(e) {
-    if(!cartPanel.classList.contains('active')) return;
-    
-    const focusableElements = cartPanel.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const firstFocusable = focusableElements[0];
-    const lastFocusable = focusableElements[focusableElements.length - 1];
-    
-    if(e.key === 'Tab') {
-      if(e.shiftKey) {
-        // Shift + Tab
-        if(document.activeElement === firstFocusable) {
-          e.preventDefault();
-          lastFocusable.focus();
-        }
-      } else {
-        // Tab
-        if(document.activeElement === lastFocusable) {
-          e.preventDefault();
-          firstFocusable.focus();
-        }
-      }
-    }
-  }
-
-  // Add focus trap event listener
-  document.addEventListener('keydown', trapCartFocus);
 
   handleResize();
   window.addEventListener('resize', handleResize);
