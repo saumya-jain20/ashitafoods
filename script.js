@@ -9,8 +9,6 @@ const PRODUCTS = [
     nameHi: 'मूंग पापड़ - शाही',
     category: 'moong',
     img: 'assets/Moong Papad - SHAHI.jpeg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['500g', '200g'],
     desc: 'Royal quality with premium chawa saji and aromatic hing.',
     descHi: 'प्रीमियम चावा साजी और सुगंधित हिंग के साथ शाही गुणवत्ता।'
   },
@@ -20,8 +18,6 @@ const PRODUCTS = [
     nameHi: 'मूंग पापड़ - स्पेशल',
     category: 'moong',
     img: 'assets/Moong Papad - SPECIAL.jpeg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['500g', '200g'],
     desc: 'Special blend with enhanced hing flavor for distinctive taste.',
     descHi: 'विशिष्ट स्वाद के लिए बढ़े हुए हिंग स्वाद के साथ विशेष मिश्रण।'
   },
@@ -31,8 +27,6 @@ const PRODUCTS = [
     nameHi: 'मूंग पंजाबी मसाला',
     category: 'moong',
     img: 'assets/Moong Punjabi Masala.jpeg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['500g', '200g'],
     desc: 'Robust Punjabi masala flavor with aromatic hing notes.',
     descHi: 'सुगंधित हिंग स्वाद के साथ मजबूत पंजाबी मसाला स्वाद।'
   },
@@ -42,8 +36,6 @@ const PRODUCTS = [
     nameHi: 'मूंग पापड़ - नंबर 1',
     category: 'moong',
     img: 'assets/Moong Papad - No.1.jpeg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['500g', '200g'],
     desc: 'Classic everyday papad with balanced flavor and perfect crispness.',
     descHi: 'संतुलित स्वाद और परफेक्ट कुरकुरेपन के साथ क्लासिक रोजमर्रा का पापड़।'
   },
@@ -53,8 +45,6 @@ const PRODUCTS = [
     nameHi: 'मूंग पापड़ - शाही जैन',
     category: 'moong',
     img: 'assets/Moong Papad - SHAHI JAIN.jpeg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['500g', '200g'],
     desc: 'Jain-friendly royal papad with rich hing flavor, no onion/garlic.',
     descHi: 'समृद्ध हिंग स्वाद के साथ जैन-अनुकूल शाही पापड़, बिना प्याज/लहसुन।'
   },
@@ -63,9 +53,7 @@ const PRODUCTS = [
     name: 'Moong Papad - PREMIUM',
     nameHi: 'मूंग पापड़ - प्रीमियम',
     category: 'moong',
-    img: 'assets/Moong Papad - PREMIUM.jpeg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['500g', '200g'],
+    img: 'assets/Moong Papad - SHAHI JAIN.jpeg',
     desc: 'Ultra-premium with extra chawa saji for superior taste and texture.',
     descHi: 'श्रेष्ठ स्वाद और बनावट के लिए अतिरिक्त चावा साजी के साथ अल्ट्रा-प्रीमियम।'
   },
@@ -75,8 +63,6 @@ const PRODUCTS = [
     nameHi: 'राजा पंजाबी - तेज मसाला',
     category: 'moong',
     img: 'assets/RAJA Punjabi - Tej Masala.jpeg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['500g', '200g'],
     desc: 'Spicy tej masala variant for those who love extra heat.',
     descHi: 'उन लोगों के लिए मसालेदार तेज मसाला वेरिएंट जो अतिरिक्त तीखापन पसंद करते हैं।'
   },
@@ -86,8 +72,6 @@ const PRODUCTS = [
     nameHi: 'डिस्को स्पेशल',
     category: 'other',
     img: 'assets/DISCO SPECIAL.jpeg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['1kg', '500g'],
     desc: 'Fun mini round papads perfect for parties and kids.',
     descHi: 'पार्टियों और बच्चों के लिए बिल्कुल सही मजेदार मिनी गोल पापड़।'
   },
@@ -97,8 +81,6 @@ const PRODUCTS = [
     nameHi: 'मूंग कतरन - स्पेशल',
     category: 'other',
     img: 'assets/Moong Katran - SPECIAL.jpeg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['1kg', '500g'],
     desc: 'Crunchy moong flakes ideal for frying or adding to snacks.',
     descHi: 'तलने या स्नैक्स में मिलाने के लिए आदर्श कुरकुरे मूंग फ्लेक्स।'
   },
@@ -108,8 +90,6 @@ const PRODUCTS = [
     nameHi: 'चना पापड़ - नंबर 1',
     category: 'chana',
     img: 'assets/Chana Papad - No.1.jpeg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['500g', '200g'],
     desc: 'Classic chana papad with traditional taste and perfect crisp.',
     descHi: 'पारंपरिक स्वाद और परफेक्ट कुरकुरेपन के साथ क्लासिक चना पापड़।'
   },
@@ -119,8 +99,6 @@ const PRODUCTS = [
     nameHi: 'चना पापड़ - शाही',
     category: 'chana',
     img: 'assets/Chana Papad - SHAHI.jpeg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['500g', '200g'],
     desc: 'Royal chana papad with khar and hing for authentic flavor.',
     descHi: 'ऑथेंटिक स्वाद के लिए खार और हिंग के साथ शाही चना पापड़।'
   },
@@ -130,8 +108,6 @@ const PRODUCTS = [
     nameHi: 'चना पापड़ - स्पेशल',
     category: 'chana',
     img: 'assets/Chana Papad - SPL.jpeg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['500g', '200g'],
     desc: 'Special sweet variant with khar for unique taste profile.',
     descHi: 'अनोखे स्वाद प्रोफाइल के लिए खार के साथ विशेष मीठा वेरिएंट।'
   },
@@ -141,8 +117,6 @@ const PRODUCTS = [
     nameHi: 'चना-स्पेशल लहसुन',
     category: 'chana',
     img: 'assets/Chana-SPECIAL Garlic.jpeg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['500g', '200g'],
     desc: 'Garlic infused chana papad with aromatic garlic flavor.',
     descHi: 'सुगंधित लहसुन स्वाद के साथ लहसुन युक्त चना पापड़।'
   },
@@ -152,8 +126,6 @@ const PRODUCTS = [
     nameHi: 'मूंग-शाही लहसुन',
     category: 'moong',
     img: 'assets/Moong-Shahi Garlic.jpeg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['500g', '200g'],
     desc: 'Premium moong papad with generous garlic infusion.',
     descHi: 'उदार लहसुन इन्फ्यूजन के साथ प्रीमियम मूंग पापड़।'
   },
@@ -163,8 +135,6 @@ const PRODUCTS = [
     nameHi: 'डॉलर मूंग',
     category: 'other',
     img: 'assets/Dollar Moong.jpg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['1kg'],
     desc: 'Uniform dollar-shaped moong papads for elegant presentation.',
     descHi: 'स्टाइलिश प्रस्तुति के लिए एकसमान डॉलर के आकार के मूंग पापड़।'
   },
@@ -173,9 +143,7 @@ const PRODUCTS = [
     name: 'Dollar Chana',
     nameHi: 'डॉलर चना',
     category: 'other',
-    img: 'assets/Dollar Chana.jpg',
-    sizes: ['3.5"', '5"', '7"'],
-    packaging: ['1kg'],
+    img: 'assets/Dollar Chana.jpeg',
     desc: 'Round chana discs with bold taste and golden crispness.',
     descHi: 'बोल्ड स्वाद और गोल्डन कुरकुरेपन के साथ गोल चना डिस्क।'
   }
@@ -244,7 +212,7 @@ function filterProducts(){
   return list;
 }
 
-// Render products: display-only with sizes and packaging
+// Render products
 function renderProducts(){
   const items = filterProducts();
   grid.innerHTML = '';
@@ -263,16 +231,6 @@ function renderProducts(){
     card.className = 'card';
     card.dataset.id = p.id;
 
-    // Create size items
-    const sizeItems = p.sizes.map(size => 
-      `<li class="size-item">${size}</li>`
-    ).join('');
-
-    // Create packaging items
-    const packagingItems = p.packaging.map(pack => 
-      `<li class="packaging-item">${pack}</li>`
-    ).join('');
-
     // Use bilingual names and descriptions
     const productName = currentLanguage === 'hi' ? (p.nameHi || p.name) : p.name;
     const productDesc = currentLanguage === 'hi' ? (p.descHi || p.desc) : p.desc;
@@ -282,26 +240,13 @@ function renderProducts(){
       <h3>${productName}</h3>
       <p class="desc">${productDesc}</p>
       
-      <div class="product-specs">
-        <!-- Available Sizes Section -->
-        <div class="spec-section">
-          <div class="section-label">${currentLanguage === 'en' ? 'Available Sizes:' : 'उपलब्ध आकार:'}</div>
-          <ul class="sizes-list">
-            ${sizeItems}
-          </ul>
-        </div>
-        
-        <!-- Packaging Options Section -->
-        <div class="spec-section">
-          <div class="section-label">${currentLanguage === 'en' ? 'Packaging Options:' : 'पैकेजिंग विकल्प:'}</div>
-          <ul class="packaging-list">
-            ${packagingItems}
-          </ul>
-        </div>
-      </div>
-      
-      <div class="contact-info" style="margin-top: 1rem; text-align: center; padding-top: 0.8rem; border-top: 1px dashed var(--border);">
-        <small style="color: var(--text-light); font-style: italic;">${currentLanguage === 'en' ? 'Contact us for pricing and orders' : 'मूल्य और ऑर्डर के लिए हमसे संपर्क करें'}</small>
+      <div class="order-info">
+        <small style="color: var(--text-light); font-style: italic;">
+          <i class="fas fa-info-circle"></i> 
+          ${currentLanguage === 'en' 
+            ? 'Minimum order quantity: 35kg • Contact for pricing' 
+            : 'न्यूनतम ऑर्डर मात्रा: 35 किलो • मूल्य के लिए संपर्क करें'}
+        </small>
       </div>
     `;
     grid.appendChild(card);
