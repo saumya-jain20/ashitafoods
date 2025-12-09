@@ -8,7 +8,7 @@ const PRODUCTS = [
     name: 'Moong Papad - PREMIUM',
     nameHi: 'मूंग पापड़ - प्रीमियम',
     category: 'moong',
-    img: 'assets/Moong Papad - Premium.jpeg',
+    img: 'assets/Moong Papad-Premium.jpeg',
     desc: 'Ultra-premium with extra chawa saji for superior taste and texture.',
     descHi: 'श्रेष्ठ स्वाद और बनावट के लिए अतिरिक्त चावा साजी के साथ अल्ट्रा-प्रीमियम।'
   },
