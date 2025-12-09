@@ -5,6 +5,15 @@ let currentLanguage = 'en';
 const PRODUCTS = [
   {
     id: 'p1',
+    name: 'Moong Papad - PREMIUM',
+    nameHi: 'मूंग पापड़ - प्रीमियम',
+    category: 'moong',
+    img: 'assets/Moong Papad - Premium.jpeg',
+    desc: 'Ultra-premium with extra chawa saji for superior taste and texture.',
+    descHi: 'श्रेष्ठ स्वाद और बनावट के लिए अतिरिक्त चावा साजी के साथ अल्ट्रा-प्रीमियम।'
+  },
+  {
+    id: 'p2',
     name: 'Moong Papad - SHAHI',
     nameHi: 'मूंग पापड़ - शाही',
     category: 'moong',
@@ -13,88 +22,7 @@ const PRODUCTS = [
     descHi: 'प्रीमियम चावा साजी और सुगंधित हिंग के साथ शाही गुणवत्ता।'
   },
   {
-    id: 'p2',
-    name: 'Moong Papad - SPECIAL',
-    nameHi: 'मूंग पापड़ - स्पेशल',
-    category: 'moong',
-    img: 'assets/Moong Papad - SPECIAL.jpeg',
-    desc: 'Special blend with enhanced hing flavor for distinctive taste.',
-    descHi: 'विशिष्ट स्वाद के लिए बढ़े हुए हिंग स्वाद के साथ विशेष मिश्रण।'
-  },
-  {
     id: 'p3',
-    name: 'Moong Punjabi Masala',
-    nameHi: 'मूंग पंजाबी मसाला',
-    category: 'moong',
-    img: 'assets/Moong Punjabi Masala.jpeg',
-    desc: 'Robust Punjabi masala flavor with aromatic hing notes.',
-    descHi: 'सुगंधित हिंग स्वाद के साथ मजबूत पंजाबी मसाला स्वाद।'
-  },
-  {
-    id: 'p4',
-    name: 'Moong Papad - No.1',
-    nameHi: 'मूंग पापड़ - नंबर 1',
-    category: 'moong',
-    img: 'assets/Moong Papad - No.1.jpeg',
-    desc: 'Classic everyday papad with balanced flavor and perfect crispness.',
-    descHi: 'संतुलित स्वाद और परफेक्ट कुरकुरेपन के साथ क्लासिक रोजमर्रा का पापड़।'
-  },
-  {
-    id: 'p5',
-    name: 'Moong Papad - SHAHI JAIN',
-    nameHi: 'मूंग पापड़ - शाही जैन',
-    category: 'moong',
-    img: 'assets/Moong Papad - SHAHI JAIN.jpeg',
-    desc: 'Jain-friendly royal papad with rich hing flavor, no onion/garlic.',
-    descHi: 'समृद्ध हिंग स्वाद के साथ जैन-अनुकूल शाही पापड़, बिना प्याज/लहसुन।'
-  },
-  {
-    id: 'p6',
-    name: 'Moong Papad - PREMIUM',
-    nameHi: 'मूंग पापड़ - प्रीमियम',
-    category: 'moong',
-    img: 'assets/Moong Papad - SHAHI JAIN.jpeg',
-    desc: 'Ultra-premium with extra chawa saji for superior taste and texture.',
-    descHi: 'श्रेष्ठ स्वाद और बनावट के लिए अतिरिक्त चावा साजी के साथ अल्ट्रा-प्रीमियम।'
-  },
-  {
-    id: 'p7',
-    name: 'RAJA Punjabi - Tej Masala',
-    nameHi: 'राजा पंजाबी - तेज मसाला',
-    category: 'moong',
-    img: 'assets/RAJA Punjabi - Tej Masala.jpeg',
-    desc: 'Spicy tej masala variant for those who love extra heat.',
-    descHi: 'उन लोगों के लिए मसालेदार तेज मसाला वेरिएंट जो अतिरिक्त तीखापन पसंद करते हैं।'
-  },
-  {
-    id: 'p8',
-    name: 'DISCO SPECIAL',
-    nameHi: 'डिस्को स्पेशल',
-    category: 'other',
-    img: 'assets/DISCO SPECIAL.jpeg',
-    desc: 'Fun mini round papads perfect for parties and kids.',
-    descHi: 'पार्टियों और बच्चों के लिए बिल्कुल सही मजेदार मिनी गोल पापड़।'
-  },
-  {
-    id: 'p9',
-    name: 'Moong Katran - SPECIAL',
-    nameHi: 'मूंग कतरन - स्पेशल',
-    category: 'other',
-    img: 'assets/Moong Katran - SPECIAL.jpeg',
-    desc: 'Crunchy moong flakes ideal for frying or adding to snacks.',
-    descHi: 'तलने या स्नैक्स में मिलाने के लिए आदर्श कुरकुरे मूंग फ्लेक्स।'
-  },
-  {
-    id: 'p10',
-    name: 'Chana Papad - No.1',
-    nameHi: 'चना पापड़ - नंबर 1',
-    category: 'chana',
-    img: 'assets/Chana Papad - No.1.jpeg',
-    desc: 'Classic chana papad with traditional taste and perfect crisp.',
-    descHi: 'पारंपरिक स्वाद और परफेक्ट कुरकुरेपन के साथ क्लासिक चना पापड़।'
-  },
-  {
-    id: 'p11',
     name: 'Chana Papad - SHAHI',
     nameHi: 'चना पापड़ - शाही',
     category: 'chana',
@@ -103,25 +31,43 @@ const PRODUCTS = [
     descHi: 'ऑथेंटिक स्वाद के लिए खार और हिंग के साथ शाही चना पापड़।'
   },
   {
-    id: 'p12',
-    name: 'Chana Papad - SPECIAL',
-    nameHi: 'चना पापड़ - स्पेशल',
-    category: 'chana',
-    img: 'assets/Chana Papad - SPL.jpeg',
-    desc: 'Special sweet variant with khar for unique taste profile.',
-    descHi: 'अनोखे स्वाद प्रोफाइल के लिए खार के साथ विशेष मीठा वेरिएंट।'
+    id: 'p4',
+    name: 'Moong Papad - SHAHI JAIN',
+    nameHi: 'मूंग पापड़ - शाही जैन',
+    category: 'moong',
+    img: 'assets/Moong Papad - SHAHI JAIN.jpeg',
+    desc: 'Jain-friendly royal papad with rich hing flavor, no onion/garlic.',
+    descHi: 'समृद्ध हिंग स्वाद के साथ जैन-अनुकूल शाही पापड़, बिना प्याज/लहसुन।'
   },
   {
-    id: 'p13',
-    name: 'Chana-SPECIAL Garlic',
-    nameHi: 'चना-स्पेशल लहसुन',
-    category: 'chana',
-    img: 'assets/Chana-SPECIAL Garlic.jpeg',
-    desc: 'Garlic infused chana papad with aromatic garlic flavor.',
-    descHi: 'सुगंधित लहसुन स्वाद के साथ लहसुन युक्त चना पापड़।'
+    id: 'p5',
+    name: 'DISCO SPECIAL',
+    nameHi: 'डिस्को स्पेशल',
+    category: 'other',
+    img: 'assets/DISCO SPECIAL.jpeg',
+    desc: 'Fun mini round papads perfect for parties and kids.',
+    descHi: 'पार्टियों और बच्चों के लिए बिल्कुल सही मजेदार मिनी गोल पापड़।'
   },
   {
-    id: 'p14',
+    id: 'p6',
+    name: 'Moong Katran - SPECIAL',
+    nameHi: 'मूंग कतरन - स्पेशल',
+    category: 'other',
+    img: 'assets/Moong Katran - SPECIAL.jpeg',
+    desc: 'Crunchy moong flakes ideal for frying or adding to snacks.',
+    descHi: 'तलने या स्नैक्स में मिलाने के लिए आदर्श कुरकुरे मूंग फ्लेक्स।'
+  },
+  {
+    id: '7',
+    name: 'Moong Punjabi Masala',
+    nameHi: 'मूंग पंजाबी मसाला',
+    category: 'moong',
+    img: 'assets/Moong Punjabi Masala.jpeg',
+    desc: 'Robust Punjabi masala flavor with aromatic hing notes.',
+    descHi: 'सुगंधित हिंग स्वाद के साथ मजबूत पंजाबी मसाला स्वाद।'
+  },
+  {
+    id: 'p8',
     name: 'Moong-Shahi Garlic',
     nameHi: 'मूंग-शाही लहसुन',
     category: 'moong',
@@ -130,11 +76,65 @@ const PRODUCTS = [
     descHi: 'उदार लहसुन इन्फ्यूजन के साथ प्रीमियम मूंग पापड़।'
   },
   {
+    id: 'p9',
+    name: 'Chana-SPECIAL Garlic',
+    nameHi: 'चना-स्पेशल लहसुन',
+    category: 'chana',
+    img: 'assets/Chana-SPECIAL Garlic.jpeg',
+    desc: 'Garlic infused chana papad with aromatic garlic flavor.',
+    descHi: 'सुगंधित लहसुन स्वाद के साथ लहसुन युक्त चना पापड़।'
+  },
+  {
+    id: 'p10',
+    name: 'Moong Papad - No.1',
+    nameHi: 'मूंग पापड़ - नंबर 1',
+    category: 'moong',
+    img: 'assets/Moong Papad - No.1.jpeg',
+    desc: 'Classic everyday papad with balanced flavor and perfect crispness.',
+    descHi: 'संतुलित स्वाद और परफेक्ट कुरकुरेपन के साथ क्लासिक रोजमर्रा का पापड़।'
+  },
+  {
+    id: 'p11',
+    name: 'Chana Papad - No.1',
+    nameHi: 'चना पापड़ - नंबर 1',
+    category: 'chana',
+    img: 'assets/Chana Papad - No.1.jpeg',
+    desc: 'Classic chana papad with traditional taste and perfect crisp.',
+    descHi: 'पारंपरिक स्वाद और परफेक्ट कुरकुरेपन के साथ क्लासिक चना पापड़।'
+  },
+  {
+    id: 'p12',
+    name: 'RAJA Punjabi - Tej Masala',
+    nameHi: 'राजा पंजाबी - तेज मसाला',
+    category: 'moong',
+    img: 'assets/RAJA Punjabi - Tej Masala.jpeg',
+    desc: 'Spicy tej masala variant for those who love extra heat.',
+    descHi: 'उन लोगों के लिए मसालेदार तेज मसाला वेरिएंट जो अतिरिक्त तीखापन पसंद करते हैं।'
+  },
+  {
+    id: 'p13',
+    name: 'Moong Papad - SPECIAL',
+    nameHi: 'मूंग पापड़ - स्पेशल',
+    category: 'moong',
+    img: 'assets/Moong Papad - SPECIAL.jpeg',
+    desc: 'Special blend with enhanced hing flavor for distinctive taste.',
+    descHi: 'विशिष्ट स्वाद के लिए बढ़े हुए हिंग स्वाद के साथ विशेष मिश्रण।'
+  },
+  {
+    id: 'p14',
+    name: 'Chana Papad - SPECIAL',
+    nameHi: 'चना पापड़ - स्पेशल',
+    category: 'chana',
+    img: 'assets/Chana Papad - SPL.jpeg',
+    desc: 'Special sweet variant with khar for unique taste profile.',
+    descHi: 'अनोखे स्वाद प्रोफाइल के लिए खार के साथ विशेष मीठा वेरिएंट।'
+  },
+  {
     id: 'p15',
     name: 'Dollar Moong',
     nameHi: 'डॉलर मूंग',
     category: 'other',
-    img: 'assets/Dollar Moong.jpg',
+    img: 'assets/Dollar Moong.jpeg',
     desc: 'Uniform dollar-shaped moong papads for elegant presentation.',
     descHi: 'स्टाइलिश प्रस्तुति के लिए एकसमान डॉलर के आकार के मूंग पापड़।'
   },
