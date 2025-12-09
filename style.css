@@ -238,7 +238,7 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
 }
 .logo-text { 
   font-family:'Playfair Display',serif; 
-  font-size:1.8rem; 
+  font-size:2.0rem; 
   font-weight:800; 
   color:var(--primary); 
   margin-bottom:2px;
@@ -248,7 +248,7 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
   background-clip: text;
 }
 .tag { 
-  font-size:0.75rem; 
+  font-size:0.65rem; 
   color:var(--text-light); 
   font-weight:500;
   letter-spacing: 1px;
@@ -356,7 +356,6 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
 .hero-background { 
   position:absolute; 
   inset:0; 
-  background:url('https://images.unsplash.com/photo-1625944226151-35bb0ec5a6e8?w=1200') center/cover; 
   opacity:.06; 
   z-index:0;
 }
@@ -384,7 +383,7 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
   display: inline-block;
 }
 .hero-title { 
-  font-size:2.5rem; 
+  font-size:2.6rem; 
   color:var(--text); 
   margin-bottom:1.2rem; 
   line-height:1.1;
@@ -1148,15 +1147,15 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
   .container{ max-width:1320px; } 
 }
 @media (max-width:1200px){
-  .hero-title{ font-size:2.4rem; }
-  .tagline-text { font-size: 2.1rem; }
+  .hero-title{ font-size:2.6rem; }
+  .tagline-text { font-size: 2.3rem; }
   .footer-grid{ grid-template-columns:1fr 1fr 1fr; gap:2rem; }
   .grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
 }
 @media (max-width:1024px){
   .hero-grid{ gap:3rem; }
-  .hero-title{ font-size:2.1rem; }
-  .tagline-text { font-size: 1.9rem; }
+  .hero-title{ font-size:2.3rem; }
+  .tagline-text { font-size: 2.0rem; }
   .section-head h2{ font-size:2.2rem; }
   .footer-grid{ grid-template-columns:1fr 1fr; }
   .contact-grid { gap: 2rem; }
@@ -1280,11 +1279,11 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
     gap: 1rem;
   }
   .hero-title{ 
-    font-size: 1.8rem;
+    font-size: 2.0rem;
     line-height: 1.2;
   }
   .tagline-text { 
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     line-height: 1.2;
   }
   .hero-lead{ 
@@ -1398,7 +1397,7 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
     font-size:14px; 
   }
   .logo-text{ 
-    font-size:1.6rem; 
+    font-size:1.9rem; 
   }
   
   /* Hero adjustments for very small screens */
@@ -1406,10 +1405,10 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
     padding:110px 0 50px; 
   }
   .hero-title{ 
-    font-size:1.6rem; 
+    font-size:1.9rem; 
   }
   .tagline-text { 
-    font-size: 1.5rem; 
+    font-size: 1.6rem; 
   }
   .hero-stats{ 
     gap: 0.8rem; 
@@ -1502,10 +1501,10 @@ h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; font-weight:700; line-
     right: 1rem;
   }
   .hero-title{ 
-    font-size: 1.5rem; 
+    font-size: 2.0rem; 
   }
   .tagline-text { 
-    font-size: 1.4rem; 
+    font-size: 1.7rem; 
   }
   .section-head h2{ 
     font-size: 1.7rem; 
