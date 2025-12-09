@@ -8,7 +8,7 @@ const PRODUCTS = [
     name: 'Moong Papad - PREMIUM',
     nameHi: 'मूंग पापड़ - प्रीमियम',
     category: 'moong',
-    img: 'assets/Moong Papad-Premium.jpeg',
+    img: 'assets/Moong Papad - PREMIUM.jpeg',
     desc: 'Ultra-premium with extra chawa saji for superior taste and texture.',
     descHi: 'श्रेष्ठ स्वाद और बनावट के लिए अतिरिक्त चावा साजी के साथ अल्ट्रा-प्रीमियम।'
   },
@@ -53,7 +53,7 @@ const PRODUCTS = [
     name: 'Moong Katran - SPECIAL',
     nameHi: 'मूंग कतरन - स्पेशल',
     category: 'other',
-    img: 'assets/Moong Katran - SPECIAL.jpeg',
+    img: 'assets/Moong Katran - SPL.jpeg',
     desc: 'Crunchy moong flakes ideal for frying or adding to snacks.',
     descHi: 'तलने या स्नैक्स में मिलाने के लिए आदर्श कुरकुरे मूंग फ्लेक्स।'
   },
@@ -71,7 +71,7 @@ const PRODUCTS = [
     name: 'Moong-Shahi Garlic',
     nameHi: 'मूंग-शाही लहसुन',
     category: 'moong',
-    img: 'assets/Moong-Shahi Garlic.jpeg',
+    img: 'assets/Moong - SHAHI Garlic.jpeg',
     desc: 'Premium moong papad with generous garlic infusion.',
     descHi: 'उदार लहसुन इन्फ्यूजन के साथ प्रीमियम मूंग पापड़।'
   },
@@ -80,7 +80,7 @@ const PRODUCTS = [
     name: 'Chana-SPECIAL Garlic',
     nameHi: 'चना-स्पेशल लहसुन',
     category: 'chana',
-    img: 'assets/Chana-SPECIAL Garlic.jpeg',
+    img: 'assets/Chana - SPL Garlic.jpeg',
     desc: 'Garlic infused chana papad with aromatic garlic flavor.',
     descHi: 'सुगंधित लहसुन स्वाद के साथ लहसुन युक्त चना पापड़।'
   },
@@ -116,7 +116,7 @@ const PRODUCTS = [
     name: 'Moong Papad - SPECIAL',
     nameHi: 'मूंग पापड़ - स्पेशल',
     category: 'moong',
-    img: 'assets/Moong Papad - SPECIAL.jpeg',
+    img: 'assets/Moong Papad - SPL.jpeg',
     desc: 'Special blend with enhanced hing flavor for distinctive taste.',
     descHi: 'विशिष्ट स्वाद के लिए बढ़े हुए हिंग स्वाद के साथ विशेष मिश्रण।'
   },
