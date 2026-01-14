@@ -239,15 +239,6 @@ function renderProducts(){
       <img src="${p.img}" alt="${productName}" loading="lazy" onerror="this.onerror=null; this.src='assets/papad.jpg';">
       <h3>${productName}</h3>
       <p class="desc">${productDesc}</p>
-      
-      <div class="order-info">
-        <small style="color: var(--text-light); font-style: italic;">
-          <i class="fas fa-info-circle"></i> 
-          ${currentLanguage === 'en' 
-            ? 'Minimum order quantity: 35kg • Contact for pricing' 
-            : 'न्यूनतम ऑर्डर मात्रा: 35 किलो • मूल्य के लिए संपर्क करें'}
-        </small>
-      </div>
     `;
     grid.appendChild(card);
   });
