@@ -125,7 +125,7 @@ const PRODUCTS = [
     name: 'Chana Papad - SPECIAL',
     nameHi: 'चना पापड़ - स्पेशल',
     category: 'chana',
-    img: 'assets/Chana Papad - SPL.jpeg',
+    img: 'assets/Chana Papad - SPECIAL.jpeg',
     desc: 'Special sweet variant with khar for unique taste profile.',
     descHi: 'अनोखे स्वाद प्रोफाइल के लिए खार के साथ विशेष मीठा वेरिएंट।'
   },
